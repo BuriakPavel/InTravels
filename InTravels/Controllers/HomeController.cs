@@ -15,14 +15,14 @@ namespace InTravels.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Описание сайта";
+            ViewBag.Message = "Site's description";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Контакты";
+            ViewBag.Message = "Contacts";
 
             return View();
         }
