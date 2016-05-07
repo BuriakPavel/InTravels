@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InTravels", "InTravels\InTravels.csproj", "{18BF2E36-8B76-4688-B65F-38D5AB7FE798}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InTravels.Tests", "InTravels.Tests\InTravels.Tests.csproj", "{FE86158D-AD3C-4597-B358-C684BE47129E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18BF2E36-8B76-4688-B65F-38D5AB7FE798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18BF2E36-8B76-4688-B65F-38D5AB7FE798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18BF2E36-8B76-4688-B65F-38D5AB7FE798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18BF2E36-8B76-4688-B65F-38D5AB7FE798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE86158D-AD3C-4597-B358-C684BE47129E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE86158D-AD3C-4597-B358-C684BE47129E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE86158D-AD3C-4597-B358-C684BE47129E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE86158D-AD3C-4597-B358-C684BE47129E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
