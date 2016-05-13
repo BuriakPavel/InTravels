@@ -14,7 +14,6 @@ C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tes
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\InTravels.Tests.dll.config
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\InTravels.Tests.dll
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\InTravels.Tests.pdb
-C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\InTravels.dll
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\Newtonsoft.Json.dll
@@ -34,7 +33,6 @@ C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tes
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\EntityFramework.dll
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\InTravels.pdb
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\System.Web.Helpers.xml
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\System.Web.Mvc.xml
@@ -54,3 +52,5 @@ C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tes
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\obj\Debug\InTravels.Tests.csprojResolveAssemblyReference.cache
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\obj\Debug\InTravels.Tests.dll
 C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\obj\Debug\InTravels.Tests.pdb
+C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\InTravels.dll
+C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\InTravels.Tests\bin\Debug\InTravels.pdb

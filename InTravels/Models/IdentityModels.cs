@@ -20,8 +20,7 @@ namespace InTravels.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-            : base("InTravelsDBConnection")
+        public ApplicationDbContext(): base("InTravelsDBConnection")
         {
         }
 
