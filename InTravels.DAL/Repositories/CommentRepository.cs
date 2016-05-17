@@ -37,7 +37,7 @@ namespace InTravels.DAL.Repositories
             return db.Comments.Where(predicate).ToList();
         }
 
-        public Comment Get(int id)
+        public Comment GetById(int id)
         {
             return db.Comments.Find(id);
         }

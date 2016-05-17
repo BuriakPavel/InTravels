@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InTravels.DAL.Entities
+namespace InTravels.BLL.DTO
 {
-    public class Post
+    public class CommentDTO
     {
         public int Id { get; set; }
-        public string Title { get; set; }
         public string Text { get; set; }
+        public int PostId { get; set; }
+        public int ParentCommentId { get; set; }
         public DateTime Date { get; set; }
         public int Likes { get; set; }
-
-        public virtual UserProfile User { get; set; }
-        public virtual ICollection<Comment> Comments { get; set; }
     }
 }

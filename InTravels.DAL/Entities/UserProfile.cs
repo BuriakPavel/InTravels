@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InTravels.DAL.Entities
@@ -7,7 +10,7 @@ namespace InTravels.DAL.Entities
     {
         [Key]
         [ForeignKey("ApplicationUser")]
-        public string Id { get; set; }
+        public Guid Id { get; set; }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -15,6 +18,7 @@ namespace InTravels.DAL.Entities
         public int Age { get; set; }
         public Gender Gender { get; set; }
 
+        public virtual ICollection<Post> Posts { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
     }
 

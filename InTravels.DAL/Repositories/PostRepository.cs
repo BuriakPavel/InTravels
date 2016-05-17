@@ -38,7 +38,7 @@ namespace InTravels.DAL.Repositories
             return db.Posts.Where(predicate).ToList();
         }
 
-        public Post Get(int id)
+        public Post GetById(int id)
         {
             return db.Posts.Find(id);
         }

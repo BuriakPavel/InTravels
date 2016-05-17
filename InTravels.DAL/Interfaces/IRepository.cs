@@ -8,7 +8,7 @@ namespace InTravels.DAL.Interfaces
 {
     public interface IRepository<T> where T : class
     {
-        T Get(int id);
+        T GetById(int id);
         IEnumerable<T> GetAll();
         IEnumerable<T> Find(Func<T, Boolean> predicate);
         void Create(T item);
