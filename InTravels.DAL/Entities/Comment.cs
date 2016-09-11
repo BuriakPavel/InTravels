@@ -14,5 +14,8 @@ namespace InTravels.DAL.Entities
         public Comment ParentComment { get; set; }
         public DateTime Date { get; set; }
         public int Likes { get; set; }
+        public string UserId { get; set; }
+
+        public virtual UserProfile User { get; set; }
     }
 }

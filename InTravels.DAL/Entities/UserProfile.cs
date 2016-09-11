@@ -10,7 +10,7 @@ namespace InTravels.DAL.Entities
     {
         [Key]
         [ForeignKey("ApplicationUser")]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -19,6 +19,7 @@ namespace InTravels.DAL.Entities
         public Gender Gender { get; set; }
 
         public virtual ICollection<Post> Posts { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
     }
 

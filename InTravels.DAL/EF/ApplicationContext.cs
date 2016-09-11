@@ -14,39 +14,15 @@ namespace InTravels.DAL.EF
 
         public ApplicationContext(string connectionString) : base(connectionString)
         {
-        }
-        static ApplicationContext()
-        {
-            Database.SetInitializer<ApplicationContext>(new DbInitializer());
+
         }
     }
 
-    public class DbInitializer : DropCreateDatabaseIfModelChanges<ApplicationContext>
+    public class DbInitializer : DropCreateDatabaseAlways<ApplicationContext>
     {
         protected override void Seed(ApplicationContext db)
         {
-            db.Posts.Add(new Post()
-            {
-                Title = "Test Title 1",
-                Date = DateTime.Now,
-                Text = "Test posts text 1",
-                Comments = new List<Comment>() { new Comment() { Date = DateTime.Now, Likes = 2, Text = "Test comment by post 1" } }
-            });
-            db.Posts.Add(new Post()
-            {
-                Title = "Test Title 2",
-                Date = DateTime.Now,
-                Text = "Test posts text 2",
-                Comments = new List<Comment>() { new Comment() { Date = DateTime.Now, Likes = 0, Text = "Test comment by post 2" } }
-            });
-            db.Posts.Add(new Post()
-            {
-                Title = "Test Title 3",
-                Date = DateTime.Now,
-                Text = "Test posts text 3",
-                Comments = new List<Comment>() { new Comment() { Date = DateTime.Now, Likes = -1, Text = "Test comment by post 3" } }
-            });
-            db.SaveChanges();
+           
         }
     }
 }

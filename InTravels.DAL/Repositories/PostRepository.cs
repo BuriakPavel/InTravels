@@ -45,7 +45,7 @@ namespace InTravels.DAL.Repositories
 
         public IEnumerable<Post> GetAll()
         {
-            return db.Posts.ToList();
+           return db.Posts.ToList();
         }
 
         public void Update(Post item)

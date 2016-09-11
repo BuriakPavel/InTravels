@@ -9,6 +9,6 @@ namespace InTravels.DAL.Entities
 {
     public class ApplicationUser : IdentityUser
     {
-        public virtual UserProfile UserProfile { get; set; } 
+        public virtual UserProfile UserProfile { get; set; }
     }
 }
