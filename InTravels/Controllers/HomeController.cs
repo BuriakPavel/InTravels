@@ -11,8 +11,8 @@ using System.Web.Mvc;
 
 namespace InTravels.Controllers
 {
-    public class HomeController : Controller
-    {
+    public class HomeController : BaseController
+	{
         IPostService postService;
 
         public HomeController(IPostService serv)

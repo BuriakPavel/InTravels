@@ -2,27 +2,29 @@
 @model IEnumerable<PostViewModel>
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = Localizations.Localization.Home_Title_Text;
 }
 
 <div class="jumbotron">
-    <p class="lead">Welcome to "InTravels"&copy; website!</p>
+    <p class="lead">@Localizations.Localization.Home_Welcome_ContentText</p>
 </div>
 
-<h2>Post's list:</h2>
+@*
+    <h2>Post's list:</h2>
 
-@foreach (var item in Model)
-{
-    <div class="row">
-        <div class="col-md-4">
-            <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
-            <p>
-                @Html.DisplayFor(modelItem => item.Text)
-            </p>
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col-md-4">
+                <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+                <p>
+                    @Html.DisplayFor(modelItem => item.Text)
+                </p>
+            </div>
         </div>
-    </div>
-}
+    }
 
-<div class="col-md">
-    @Html.Partial("_CreateNewPostView", new PostViewModel())
-</div>
+    <div class="col-md">
+        @Html.Partial("_CreateNewPostView", new PostViewModel())
+    </div>
+*@

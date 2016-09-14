@@ -12,10 +12,11 @@ using InTravels.Models;
 using InTravels.BLL.Interfaces;
 using InTravels.BLL.DTO;
 using InTravels.BLL.Infrastructure;
+using InTravels.Attributes;
 
 namespace InTravels.Controllers
 {
-	public class AccountController : Controller
+	public class AccountController : BaseController
 	{
 		private IUserService UserService
 		{

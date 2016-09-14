@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InTravels - @ViewBag.Title</title>
+    <title>@Localizations.Localization.SiteTitle - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -17,13 +17,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("InTravels", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink(@Localizations.Localization.SiteTitle, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>
+                        @using (Html.BeginForm("ChangeCulture", "Base"))
+                        {
+                            <select name="lang">
+                                <option disabled selected>@Localizations.Localization.ChooseLang</option>
+                                <option value="en">EN</option>
+                                <option value="ru">RU</option>
+                                <option value="uk-UA">UA</option>
+                            </select>
+                            <input type="submit" name="submit" value="@Localizations.Localization.ChooseLang">}
+                    </li>
+                    <li></li>
+                    <li>@Html.ActionLink(Localizations.Localization.Menu_Home_Link, "Index", "Home")</li>
+                    <li>@Html.ActionLink(Localizations.Localization.Menu_About_Link, "About", "Home")</li>
+                    <li>@Html.ActionLink(Localizations.Localization.Menu_Contacts_Link, "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -33,7 +45,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>Copyright &copy; @DateTime.Now.Year - Pavel Buriak. All rights reserved.</p>
+            <p>@string.Format(Localizations.Localization.Copyright_Format, DateTime.Now.Year)</p>
         </footer>
     </div>
 
