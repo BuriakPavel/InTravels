@@ -134,3 +134,9 @@ C:\InTravels\InTravels.Tests\obj\Debug\InTravels.Tests.dll
 C:\InTravels\InTravels.Tests\obj\Debug\InTravels.Tests.pdb
 C:\InTravels\InTravels.Tests\bin\Debug\ru\InTravels.resources.dll
 C:\InTravels\InTravels.Tests\bin\Debug\uk-UA\InTravels.resources.dll
+C:\InTravels\InTravels.Tests\bin\Debug\System.Web.Http.dll
+C:\InTravels\InTravels.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\InTravels\InTravels.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\InTravels\InTravels.Tests\bin\Debug\System.Web.Http.xml
+C:\InTravels\InTravels.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\InTravels\InTravels.Tests\bin\Debug\System.Web.Http.WebHost.xml

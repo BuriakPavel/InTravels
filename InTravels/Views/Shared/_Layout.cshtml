@@ -36,6 +36,7 @@
                     <li>@Html.ActionLink(Localizations.Localization.Menu_Home_Link, "Index", "Home")</li>
                     <li>@Html.ActionLink(Localizations.Localization.Menu_About_Link, "About", "Home")</li>
                     <li>@Html.ActionLink(Localizations.Localization.Menu_Contacts_Link, "Contact", "Home")</li>
+                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
