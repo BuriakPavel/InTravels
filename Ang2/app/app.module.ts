@@ -1,6 +1,8 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { PostService } from './services/posts.service';
+
 import { AppComponent }  from './app.component';
 import { MenuComponent } from './components/layout/menu/menu.component';
 import { PostItemComponent } from './components/post/post-item/post-item.component';

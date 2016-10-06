@@ -1,10 +1,19 @@
-export class Comment {
-  public id: number;
-  public PostId: number;
-  public UserName: string;
-  public PublishDate: string;
-  public Image: string;
-  public Text: string;
+export interface IComment {
+  id: number;
+  PostId: number;
+  UserName: string;
+  PublishDate: string;
+  Image: string;
+  Text: string;
+}
+
+export class Comment implements IComment {
+   id: number;
+   PostId: number;
+   UserName: string;
+   PublishDate: string;
+   Image: string;
+   Text: string;
 
   constructor() {
 

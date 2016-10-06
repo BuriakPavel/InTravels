@@ -13,15 +13,15 @@ export interface IPost {
 }
 
 export class Post implements IPost {
-  public id: number;
-  public UserName: string;
-  public PublishDate: string;
-  public Image: string;
-  public Title: string;
-  public Text: string;
-  public Tags: string[];
-  public LikesCount: number;
-  public Comments: Comment[];
+   id: number;
+   UserName: string;
+   PublishDate: string;
+   Image: string;
+   Title: string;
+   Text: string;
+   Tags: string[];
+   LikesCount: number;
+   Comments: Comment[];
 
   constructor(title: string, text: string, user: string) {
       this.id = 0;
