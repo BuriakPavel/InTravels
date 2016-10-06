@@ -2,18 +2,19 @@
   <menu></menu>
 </nav>
 
-<div class="jumbotron">
+<div class="jumbotron" style="30px 0px 20px 0px;">
   <div class="container text-center">
     <h1>In Travels</h1>
     <p>Mission, Vission & Values</p>
   </div>
 </div>
 
-<div class="container text-center">
+<div class="container text-center" style="width: initial; padding:0px 45px;">
   <div class="row">
     <!-- container -->
 
-    <div class="col-sm-3 well">  <!-- left-side -->
+    <div class="col-sm-2 well">
+      <!-- left-side -->
       <div class="well">
         <p><a href="#">My Profile</a></p>
         <img src="content/images/male-1.png" class="img-circle" height="65" width="65" alt="Avatar">
@@ -39,13 +40,14 @@
       <p><a href="#">Link 3</a></p>
     </div>
 
-    <div class="col-sm-7">
+    <div class="col-sm-8">
       <!-- center -->
-      <post-list></post-list>
+      <post-list [posts]="posts"></post-list>
       <post-form></post-form>
     </div>
 
-    <div class="col-sm-2 well"> <!-- right-side bar -->
+    <div class="col-sm-2 well">
+      <!-- right-side bar -->
       <div class="thumbnail">
         <p>Upcoming Events:</p>
         <img src="content/images/paris.jpg" alt="Paris" width="400" height="300">
@@ -63,6 +65,8 @@
   </div>
 </div>
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
+<div class="jumbotron" style="margin:0px; padding: 30px 0px 20px 0px;">
+  <div class="container text-center">
+    <p>Footer Text</p>
+  </div>
+</div>

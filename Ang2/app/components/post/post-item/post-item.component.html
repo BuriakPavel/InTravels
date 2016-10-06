@@ -1,0 +1,31 @@
+<div class="row">
+      <div class="col-sm-2" style="padding-right:0px">
+        <div class="well">
+          <img src="{{ post.Image }}" class="img-circle" height="55" width="55" alt="Avatar">
+        </div>
+      </div>
+      <div class="col-sm-10 text-left">
+        <div class="col-sm-4 ">
+          {{ post.UserName }}
+        </div>
+        <div class="col-md-offset-5 text-right">
+          {{ post.PublishDate }}
+        </div>
+        <hr/>
+        <h2>{{ post.Title }}</h2>
+      </div>
+    </div>
+    <div class="text-left">
+      <div class="well">
+        <p>{{ post.Text }}</p>
+        <p>
+          <span style="margin-right: 5px;" class="label label-primary" *ngFor="let tag of post.Tags">
+            {{ tag }}
+          </span>
+        </p>
+      </div>
+    </div>
+    <br/>
+<!-- TODO: add comments list 
+    <comments-list></comments-list>
+-->
