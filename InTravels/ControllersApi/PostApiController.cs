@@ -39,12 +39,13 @@ namespace InTravels.ControllersApi
 			return postVM;
 		}
 
-		//[HttpPost]
-		//public void CreatePost([FromBody]PostViewModel PostViewModel)
-		//{
-		//	db.Posts.Add(Post);
-		//	db.SaveChanges();
-		//}
+		[HttpPost]
+		public void CreatePost([FromBody]PostViewModel postViewModel)
+		{
+            Mapper.Initialize(cfg => cfg.CreateMap<PostViewModel, PostDTO>());
+            PostDTO postDto = Mapper.Map<PostViewModel, PostDTO>(postViewModel);
+            postService.CreateNew(postDto);
+		}
 
 		//[HttpPut]
 		//public void EditPost(int id, [FromBody]PostViewModel Post)
