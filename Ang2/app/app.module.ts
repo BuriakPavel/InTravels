@@ -1,5 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http'
 
 import { PostService } from './services/posts.service';
 
@@ -10,7 +11,7 @@ import { PostListComponent } from './components/post/post-list/post-list.compone
 import { PostFormComponent } from './components/post/post-form/post-form.component';
 
 @NgModule({
-  imports: [ BrowserModule ],
+  imports: [ BrowserModule, HttpModule ],
   declarations: [ AppComponent, MenuComponent, PostItemComponent, PostListComponent, PostFormComponent ],
   bootstrap: [ AppComponent ]
 })
