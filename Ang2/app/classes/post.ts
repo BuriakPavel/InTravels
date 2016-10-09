@@ -1,7 +1,7 @@
 import { Comment } from '../classes/comment';
 
 export interface IPost {
-  id: number;
+  Id: number;
   UserName: string;
   PublishDate: string;
   Image: string;
@@ -13,7 +13,7 @@ export interface IPost {
 }
 
 export class Post implements IPost {
-   id: number;
+   Id: number;
    UserName: string;
    PublishDate: string;
    Image: string;

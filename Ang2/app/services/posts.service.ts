@@ -12,11 +12,10 @@ export class PostService {
     constructor(private http : Http){}
 
     getPosts(): Promise<IPost[]> {
-        return this.http.get('app/data/posts.json')
+        return this.http.get('http://localhost/InTravels/PostApi/GetPosts')
                         .toPromise()
                         .then(res => res.json())
                         .catch(this.handleError); 
-        //new Promise(resolve => setTimeout(() => resolve(posts), 1000));
     }
 
     addPost(post: IPost): void {
