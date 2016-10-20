@@ -16,7 +16,6 @@ export class PostService {
                         .toPromise()
                         .then(res => res.json())
                         .catch(this.handleError); 
-        //new Promise(resolve => setTimeout(() => resolve(posts), 1000));
     }
 
     addPost(post: IPost): void {

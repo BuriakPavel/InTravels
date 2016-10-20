@@ -1,5 +1,5 @@
 export interface IComment {
-  id: number;
+  Id: number;
   PostId: number;
   UserName: string;
   PublishDate: string;
@@ -8,7 +8,7 @@ export interface IComment {
 }
 
 export class Comment implements IComment {
-   id: number;
+   Id: number;
    PostId: number;
    UserName: string;
    PublishDate: string;

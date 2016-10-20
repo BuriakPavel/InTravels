@@ -2,11 +2,15 @@
 using InTravels.BLL.DTO;
 using InTravels.BLL.Interfaces;
 using InTravels.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
+using System.Web.Helpers;
 using System.Web.Http;
 
 namespace InTravels.ControllersApi
@@ -28,7 +32,11 @@ namespace InTravels.ControllersApi
 			Mapper.Initialize(cfg => cfg.CreateMap<PostDTO, PostViewModel>());
 			var postViewModels = Mapper.Map<IEnumerable<PostDTO>, List<PostViewModel>>(posts);
 
-			return postViewModels;
+            // TODO: remove this test functionality
+            string json = File.ReadAllText(System.Web.HttpContext.Current.Server.MapPath(@"~/App_Data/posts.json"));
+            postViewModels = JsonConvert.DeserializeObject<List<PostViewModel>>(json);
+            // ---------------
+            return postViewModels;
 		}
 
 		public PostViewModel GetPost(int id)

@@ -1,7 +1,7 @@
 import { Comment } from '../classes/comment';
 
 export interface IPost {
-  id: number;
+  Id: number;
   UserName: string;
   PublishDate: string;
   Image: string;
@@ -13,7 +13,7 @@ export interface IPost {
 }
 
 export class Post implements IPost {
-   id: number;
+   Id: number;
    UserName: string;
    PublishDate: string;
    Image: string;
@@ -24,7 +24,7 @@ export class Post implements IPost {
    Comments: Comment[];
 
   constructor(title: string, text: string, user: string) {
-      this.id = 0;
+      this.Id = 0;
       this.PublishDate = "Saturday, June 13, 2015 11:19 PM";
       this.Image = "content/images/female-1.png";
       this.Tags = ["tag 1", "tag 2"];
