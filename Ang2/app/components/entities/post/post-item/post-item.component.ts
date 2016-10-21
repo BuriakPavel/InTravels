@@ -1,10 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-import { Post } from '../../../classes/post';
+import { Post } from '../../../../classes/post';
 
 @Component({
     selector: 'post-item',
-    templateUrl: './app/components/post/post-item/post-item.component.html'
+    templateUrl: './app/components/entities/post/post-item/post-item.component.html'
 })
 export class PostItemComponent {
     @Input() post: Post;

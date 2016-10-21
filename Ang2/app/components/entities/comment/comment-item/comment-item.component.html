@@ -1,0 +1,21 @@
+<li class="media text-left">
+  <div class="media-left media-top">
+    <a href="#">
+      <img src="{{ comment.Image }}" class="media-object img-circle" height="55" width="55" alt="Avatar">
+    </a>
+  </div>
+  <div class="media-body">
+    <blockquote class="media-heading" style="font-size: 14px; ">
+      <cite title="Go to profile">
+        <a href="#">{{ comment.UserName }}</a> 
+        </cite>
+      <p>
+        {{ comment.PublishDate }}
+      </p>
+      <em>{{ comment.Text }}</em>
+    </blockquote>
+    <ul class="media-list">
+      <comment-item *ngFor="let answer of comment.Answers" [comment]="answer"></comment-item>
+    </ul>
+  </div>
+</li>

@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 import { PostService } from './services/posts.service'
 
-import { MenuComponent } from './components/layout/menu/menu.component';
-import { PostListComponent } from './components/post/post-list/post-list.component';
-import { PostFormComponent } from './components/post/post-form/post-form.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { PostListComponent } from './components/entities/post/post-list/post-list.component';
+import { PostFormComponent } from './components/entities/post/post-form/post-form.component';
 
 @Component({
     selector: 'my-app',

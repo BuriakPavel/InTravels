@@ -1,10 +1,10 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { Post } from '../../../classes/post';
-import { PostService } from '../../../services/posts.service';
+import { Post } from '../../../../classes/post';
+import { PostService } from '../../../../services/posts.service';
 
 @Component({
     selector: 'post-form',
-    templateUrl: './app/components/post/post-form/post-form.component.html'
+    templateUrl: './app/components/entities/post/post-form/post-form.component.html'
 })
 export class PostFormComponent {
     @Output() added = new EventEmitter();

@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Post, IPost } from '../../../classes/post'
+import { Post, IPost } from '../../../../classes/post'
 import { PostItemComponent } from '../../post/post-item/post-item.component'
 
-import { PostService } from '../../../services/posts.service';
+import { PostService } from '../../../../services/posts.service';
 
 @Component({
     selector: 'post-list',
-    templateUrl: './app/components/post/post-list/post-list.component.html'
+    templateUrl: './app/components/entities/post/post-list/post-list.component.html'
 })
 
 export class PostListComponent implements OnInit {

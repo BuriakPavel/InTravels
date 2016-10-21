@@ -5,6 +5,7 @@ export interface IComment {
   PublishDate: string;
   Image: string;
   Text: string;
+  Answers: Comment[];
 }
 
 export class Comment implements IComment {
@@ -14,6 +15,7 @@ export class Comment implements IComment {
    PublishDate: string;
    Image: string;
    Text: string;
+   Answers: Comment[];
 
   constructor() {
 

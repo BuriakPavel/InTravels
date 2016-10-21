@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 
-import { Comment } from '../../../classes/comment';
+import { Comment } from '../../../../classes/comment';
 
 @Component({
     selector: 'comment-item',
-    templateUrl: './app/components/comment/comment-item/comment-item.component.html'
+    templateUrl: './app/components/entities/comment/comment-item/comment-item.component.html'
 })
 export class CommentItemComponent {
     @Input() comment: Comment;
