@@ -10,14 +10,17 @@ namespace InTravels.Web
 	{
 		public static void Register(HttpConfiguration config)
 		{
-			// Web API configuration and services
+            //cross-origin resource sharing config
+            config.EnableCors();
 
-			// Web API routes
-			config.MapHttpAttributeRoutes();
+            // Web API configuration and services
+
+            // Web API routes
+            config.MapHttpAttributeRoutes();
 
 			config.Routes.MapHttpRoute(
 				name: "DefaultApi",
-				routeTemplate: "{controller}/{action}/{id}",
+				routeTemplate: "api/{controller}/{action}/{id}",
 				defaults: new { id = RouteParameter.Optional }
 			);
 

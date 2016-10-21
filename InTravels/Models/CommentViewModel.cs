@@ -13,5 +13,6 @@ namespace InTravels.Models
         public string PublishDate { get; set; }
         public string Image { get; set; }
         public string Text { get; set; }
+        public List<CommentViewModel> Answers { get; set; }
     }
 }
