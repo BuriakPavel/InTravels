@@ -12,7 +12,7 @@ export class PostService {
     constructor(private http : Http){}
 
     getPosts(): Promise<IPost[]> {
-        return this.http.get('http://localhost/InTravels/api/PostApi/GetPosts')
+        return this.http.get('http://10.214.3.13/InTravels/api/PostApi/GetPosts')
                         .toPromise()
                         .then(res => res.json())
                         .catch(this.handleError); 
