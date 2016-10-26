@@ -10,6 +10,7 @@ export interface IPost {
   Tags: string[];
   LikesCount: number;
   Comments: Comment[];
+  ShowComments: boolean;
 }
 
 export class Post implements IPost {
@@ -22,6 +23,7 @@ export class Post implements IPost {
    Tags: string[];
    LikesCount: number;
    Comments: Comment[];
+   ShowComments: boolean;
 
   constructor(title: string, text: string, user: string) {
       this.Id = 0;

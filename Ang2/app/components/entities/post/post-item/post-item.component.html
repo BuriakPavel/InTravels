@@ -24,7 +24,10 @@
           </span>
         </p>
       </div>
+          <button (click)="hideComments()" *ngIf="!post.ShowComments" class="btn btn-sm btn-primary">Show comments</button>
     </div>
     <br/>
     
-    <comment-list [comments]="post.Comments"></comment-list>
+    <comment-list *ngIf="post.ShowComments" [comments]="post.Comments"></comment-list>
+    
+    <button *ngIf="post.ShowComments" (click)="hideComments(post)" class="btn btn-sm btn-primary">Hide comments</button>
