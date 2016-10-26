@@ -65,3 +65,11 @@ textarea {
   border-radius: 10px;
   font-size: 26px;
 }
+
+post-item button {
+  background: transparent;
+  border-width: 2px;
+  border-color: #df691a;
+  border-radius: 6px;
+  font-size: 18px;
+}

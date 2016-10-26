@@ -19,6 +19,7 @@ import { FooterComponent } from './components/layout/mainfooter/mainfooter.compo
 // pages
 import { StartpageComponent } from './components/layout/startpage/startpage.component'
 import { HomepageComponent } from './components/layout/homepage/homepage.component'
+import { NotFoundPageComponent } from './components/layout/notFoundPage/notFoundPage.component';
 
 // entities components
 import { AppComponent }  from './app.component';
@@ -38,7 +39,7 @@ import { CommentFormComponent } from './components/entities/comment/comment-form
     ],
   declarations: [ 
     AppComponent, 
-    StartpageComponent, HomepageComponent,
+    StartpageComponent, HomepageComponent, NotFoundPageComponent, 
     HeaderComponent, LeftbarComponent, ContainerComponent, RightbarComponent, FooterComponent,
     PostItemComponent, PostListComponent, PostFormComponent,
     CommentItemComponent, CommentListComponent, CommentFormComponent

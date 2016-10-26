@@ -14,13 +14,14 @@ export class PostItemComponent {
         this.deleted = new EventEmitter<Post>();
     }
 
-    showComments(post: Post) {
-        post.ShowComments = true;
+    showComments() {
+        this.post.ShowComments = true;
     }
 
     hideComments() {
         this.post.ShowComments = false;
     }
+
     postLike() {
         this.post.LikesCount += 1;
     }
