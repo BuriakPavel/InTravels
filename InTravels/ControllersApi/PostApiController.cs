@@ -12,9 +12,11 @@ using System.Net.Http;
 using System.Text;
 using System.Web.Helpers;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace InTravels.ControllersApi
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PostApiController : BaseApiController
 	{
 		IPostService postService;

@@ -9,7 +9,7 @@ using System.Web.Http.Cors;
 
 namespace InTravels.ControllersApi
 {
-    [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class BaseApiController : ApiController
     {
 

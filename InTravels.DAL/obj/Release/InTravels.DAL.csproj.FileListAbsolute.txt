@@ -1,0 +1,14 @@
+C:\InTravels\InTravels.DAL\bin\Release\InTravels.DAL.dll.config
+C:\InTravels\InTravels.DAL\bin\Release\InTravels.DAL.dll
+C:\InTravels\InTravels.DAL\bin\Release\InTravels.DAL.pdb
+C:\InTravels\InTravels.DAL\bin\Release\EntityFramework.dll
+C:\InTravels\InTravels.DAL\bin\Release\EntityFramework.SqlServer.dll
+C:\InTravels\InTravels.DAL\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\InTravels\InTravels.DAL\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\InTravels\InTravels.DAL\bin\Release\EntityFramework.xml
+C:\InTravels\InTravels.DAL\bin\Release\EntityFramework.SqlServer.xml
+C:\InTravels\InTravels.DAL\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\InTravels\InTravels.DAL\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\InTravels\InTravels.DAL\obj\Release\InTravels.DAL.csprojResolveAssemblyReference.cache
+C:\InTravels\InTravels.DAL\obj\Release\InTravels.DAL.dll
+C:\InTravels\InTravels.DAL\obj\Release\InTravels.DAL.pdb
