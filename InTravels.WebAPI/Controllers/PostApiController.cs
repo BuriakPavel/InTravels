@@ -18,7 +18,6 @@ using System.Web.Http.Description;
 
 namespace InTravels.ControllersApi
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PostApiController : BaseApiController
     {
 		IPostService postService;

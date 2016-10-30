@@ -5,7 +5,6 @@ using System.Text;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using InTravels;
-using InTravels.Controllers;
 
 namespace InTravels.Tests.Controllers
 {

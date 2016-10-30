@@ -6,6 +6,7 @@ import { PostService } from '../../../services/posts.service'
 import { HeaderComponent } from '../../layout/header/header.component';
 import { PostListComponent } from '../../entities/post/post-list/post-list.component';
 import { PostFormComponent } from '../../entities/post/post-form/post-form.component';
+import { Locale, LocaleService, LocalizationService } from 'angular2localization';
 
 @Component({
     selector: 'homepage',

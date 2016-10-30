@@ -162,10 +162,10 @@
 	<data name="HomePage_Tagline_Text" xml:space="preserve">
 		<value>Читайте хорошие истории и делитесь своими</value>
 	</data>
-	<data name="Menu_Posts_Link" xml:space="preserve">
+	<data name="Posts_Title_Text" xml:space="preserve">
 		<value>Публикации</value>
 	</data>
-	<data name="Menu_MyAccount_Link" xml:space="preserve">
+	<data name="Menu_MyAccount_Title" xml:space="preserve">
 		<value>Мой аккаунт</value>
 	</data>
 </root>

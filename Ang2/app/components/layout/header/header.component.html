@@ -5,12 +5,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-    <a class="navbar-brand" [routerLink]="['/start']">Start</a>
+    <a class="navbar-brand" [routerLink]="['/start']">{{ 'SiteTitle' | translate:lang }}</a>
   </div>
   <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
-      <li><a [routerLink]="['/home']">Home</a></li>
-      <li><a [routerLink]="['/home/posts']">Posts</a></li>
+      <li><a [routerLink]="['/home']">{{ 'Menu_Home_Link' | translate:lang  }}</a></li>
+      <li><a [routerLink]="['/home/posts']">{{ 'Menu_Posts_Link' | translate:lang  }}</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+       <li><a class="active" (click)="ChangeCulture('en','US')">EN</a></li>
+       <li><a (click)="ChangeCulture('ua','UA')">UA</a></li>
+       <li><a (click)="ChangeCulture('ru','RU')">RU</a></li>
     </ul>
     <!--<form class="navbar-form navbar-right" role="search">
       <div class="form-group input-group">
@@ -23,7 +28,7 @@
       </div>
     </form>-->
     <ul class="nav navbar-nav navbar-right">
-      <li><a [routerLink]="['/account']"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+      <li><a [routerLink]="['/account']"><span class="glyphicon glyphicon-user"></span>{{ 'Menu_MyAccount_Link' | translate:lang  }}</a></li>
     </ul>
   </div>
 </div>

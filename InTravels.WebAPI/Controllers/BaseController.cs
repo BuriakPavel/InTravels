@@ -13,7 +13,7 @@ namespace InTravels.WebAPI.Controllers
 		public ActionResult ChangeCulture(string lang)
 		{
 			string returnUrl = Request.UrlReferrer.AbsolutePath;
-			List<string> cultures = new List<string>() { "en", "ru", "uk-UA" }; // TODO! Replace to config file!
+			List<string> cultures = new List<string>() { "en", "ru-RU", "uk-UA" }; // TODO! Replace to config file!
 			if (!cultures.Contains(lang))
 			{
 				lang = "en";

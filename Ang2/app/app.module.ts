@@ -3,6 +3,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { LocaleModule, LocalizationModule } from 'angular2localization';
 
 import { AppRoutingModule } from '../app/app-routing.module';
 
@@ -35,6 +36,8 @@ import { CommentFormComponent } from './components/entities/comment/comment-form
   imports: [ 
     BrowserModule, 
     HttpModule,
+    LocaleModule.forRoot(),
+    LocalizationModule.forRoot(),
     AppRoutingModule
     ],
   declarations: [ 
