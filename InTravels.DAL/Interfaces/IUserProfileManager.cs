@@ -6,5 +6,6 @@ namespace InTravels.DAL.Interfaces
     public interface IUserProfileManager : IDisposable
     {
         void Create(UserProfile item);
+        UserProfile GetUserInfoByEmail(string email);
     }
 }

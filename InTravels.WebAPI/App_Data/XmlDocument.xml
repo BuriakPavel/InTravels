@@ -503,5 +503,18 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:InTravels.ControllersApi.PostApiController.GetPosts">
+            <summary>
+            Get all posts
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InTravels.ControllersApi.PostApiController.GetPost(System.Int32)">
+            <summary>
+            Get post by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

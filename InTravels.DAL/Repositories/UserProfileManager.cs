@@ -6,26 +6,39 @@ using System.Text;
 using System.Threading.Tasks;
 using InTravels.DAL.Entities;
 using InTravels.DAL.EF;
+using System.Data.Entity;
 
 namespace InTravels.DAL.Repositories
 {
     public class UserProfileManager : IUserProfileManager
     {
-        public ApplicationContext Database { get; set; }
+        public ApplicationContext DB { get; set; }
         public UserProfileManager(ApplicationContext db)
         {
-            Database = db;
+            DB = db;
         }
 
         public void Create(UserProfile item)
         {
-            Database.UserProfiles.Add(item);
-            Database.SaveChanges();
+            DB.UserProfiles.Add(item);
+            DB.SaveChanges();
+        }
+
+        public UserProfile GetUserInfoByEmail(string email)
+        {
+            using (var db = DB)
+            {
+                var userProfile = db.UserProfiles
+                    .Include(x => x.ApplicationUser)
+                    .First(x => x.ApplicationUser.Email == email);
+                return userProfile;
+            }
         }
 
         public void Dispose()
         {
-            Database.Dispose();
+            DB.Dispose();
         }
+
     }
 }

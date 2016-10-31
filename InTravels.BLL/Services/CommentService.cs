@@ -41,7 +41,7 @@ namespace InTravels.BLL.Services
         {
             if (string.IsNullOrEmpty(userId))
                 throw new ValidationException("UserId parameter is null!", "userId");
-            var comments = DB.Comments.Find(x => x.Post.User.Id == userId);
+            var comments = DB.Comments.Find(x => x.Post.UserProfileId == userId);
             if (comments == null)
                 throw new ValidationException("The comments not finded!", "");
             Mapper.Initialize(c => c.CreateMap<Comment, CommentDTO>());
@@ -72,7 +72,7 @@ namespace InTravels.BLL.Services
         {
             if (parentCommentId == 0)
                 throw new ValidationException("ParentCommentId parameter is null!", "parentCommentId");
-            var comments = DB.Comments.Find(x => x.ParentComment.Id == parentCommentId);
+            var comments = DB.Comments.Find(x => x.Id == parentCommentId);
             if (comments == null)
                 throw new ValidationException("The comments not finded!", "");
             Mapper.Initialize(c => c.CreateMap<Comment, CommentDTO>());

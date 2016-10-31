@@ -41,7 +41,7 @@ namespace InTravels.BLL.Services
         {
             if (string.IsNullOrEmpty(userId))
                 throw new ValidationException("UserId parameter is null!", "userId");
-            var posts = DB.Posts.Find(x => x.User.Id == userId);
+            var posts = DB.Posts.Find(x => x.UserProfileId == userId);
             if (posts == null)
                 throw new ValidationException("The posts not finded!", "");
             Mapper.Initialize(c => c.CreateMap<Post, PostDTO>());

@@ -17,7 +17,10 @@ namespace InTravels.DAL.Entities
         public string Address { get; set; }
         public int Age { get; set; }
         public Gender Gender { get; set; }
+        public decimal Rating { get; set; }
 
+        public virtual ICollection<UserProfile> Subscriptions { get; set; }
+        public virtual ICollection<UserProfile> Subscribers { get; set; }
         public virtual ICollection<Post> Posts { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }

@@ -85,18 +85,18 @@ namespace InTravels.BLL.Services
 
         public UserDTO GetUserByEmail(string email)
         {
-            ApplicationUser user = DB.UserManager.FindByEmail(email);
+            UserProfile userProfile = DB.UserProfileManager.GetUserInfoByEmail(email);
 			UserDTO userDto = new UserDTO()
 			{
-				Id = user.Id,
-				Password = user.PasswordHash,
-				Email = user.Email,
-				UserName = user.Email,
-				FirstName = user.UserProfile.FirstName,
-				LastName = user.UserProfile.LastName,
-				Address = user.UserProfile.Address,
-				Age = user.UserProfile.Age,
-				Gender = user.UserProfile.Gender
+				Id = userProfile.Id,
+				Password = userProfile.ApplicationUser.PasswordHash,
+				Email = userProfile.ApplicationUser.Email,
+				UserName = userProfile.ApplicationUser.Email,
+				FirstName = userProfile.FirstName,
+				LastName = userProfile.LastName,
+				Address = userProfile.Address,
+				Age = userProfile.Age,
+				Gender = userProfile.Gender
 			};
 			return userDto;
         }

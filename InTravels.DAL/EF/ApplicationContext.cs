@@ -12,6 +12,14 @@ namespace InTravels.DAL.EF
         public IDbSet<Post> Posts { get; set; }
         public IDbSet<Comment> Comments { get; set; }
 
+        // For migrations --------------
+        public ApplicationContext() : base("InTravelsDBConnection")
+        {
+            Console.Write("asdfasdfasdf");
+        }
+
+        // --------------------
+
         public ApplicationContext(string connectionString) : base(connectionString)
         {
 

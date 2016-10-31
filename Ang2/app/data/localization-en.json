@@ -1,0 +1,19 @@
+{
+    "Menu_HelloMessage_Link_Format": "Hello, {0}!",
+    "SiteTitle": "InTravels",
+    "Menu_Home_Link": "Homepage",
+    "Menu_Posts_Link": "Posts",
+    "Home_Title_Text": "Homepage",
+    "Home_Welcome_ContentText": "Welcome to InTravels© website!",
+    "StartPage_Tagline_Text": "Anywhere, anytime",
+    "Menu_LogIn_Link": "Login",
+    "Menu_About_Link": "About",
+    "Menu_Register_Link": "Register",
+    "Menu_LogOff_Link": "Logout",
+    "ChooseLang": "Select",
+    "Menu_Contacts_Link": "Contacts",
+    "StartPage_GoToTheSite_Button": "Go to the site!",
+    "Copyright_Format": "Copyright © {0} - Pavel Buriak. All rights reserved.",
+    "Menu_MyAccount_Link": "My Account",
+    "HomePage_Tagline_Text": "Read the good stories and share yours"
+}

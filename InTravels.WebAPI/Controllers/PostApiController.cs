@@ -28,21 +28,29 @@ namespace InTravels.ControllersApi
 		{
 			postService = serv;
 		}
-
+        /// <summary>
+        /// Get all posts
+        /// </summary>
+        /// <returns></returns>
 		public IEnumerable<PostViewModel> GetPosts()
 		{
-			//var posts = postService.GetAllPosts();
-			//Mapper.Initialize(cfg => cfg.CreateMap<PostDTO, PostViewModel>());
-			//var postViewModels = Mapper.Map<IEnumerable<PostDTO>, List<PostViewModel>>(posts);
+			var posts = postService.GetAllPosts();
+			Mapper.Initialize(cfg => cfg.CreateMap<PostDTO, PostViewModel>());
+			var postViewModels = Mapper.Map<IEnumerable<PostDTO>, List<PostViewModel>>(posts);
 
             // TODO: remove this test functionality
-            string json = File.ReadAllText(System.Web.HttpContext.Current.Server.MapPath(@"~/App_Data/posts.json"));
-            var postViewModels = JsonConvert.DeserializeObject<List<PostViewModel>>(json);
+            //string json = File.ReadAllText(System.Web.HttpContext.Current.Server.MapPath(@"~/App_Data/posts.json"));
+            //var postViewModels = JsonConvert.DeserializeObject<List<PostViewModel>>(json);
             // ---------------
             return postViewModels;
 		}
 
-        [ApiExplorerSettings(IgnoreApi = true)]
+        /// <summary>
+        /// Get post by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = false)]
         public PostViewModel GetPost(int id)
 		{
 			PostDTO postDto = postService.GetPostById(id);
