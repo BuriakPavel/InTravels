@@ -127,7 +127,7 @@
     <value>Главная</value>
   </data>
 	<data name="Home_Welcome_ContentText" xml:space="preserve">
-    <value>Добро пожаловать на сайт "InTravels"©!</value>
+    <value>Добро пожаловать на сайт InTravels©!</value>
   </data>
 	<data name="Menu_About_Link" xml:space="preserve">
     <value>О сайте</value>

@@ -27,8 +27,7 @@
     <userSetting name="pavel.buriak@p-buriak.filesInitialDir">C:\InTravels\Localization</userSetting>
     <userSetting name="pavel.buriak@p-buriak.FindText">
     </userSetting>
-    <userSetting name="pavel.buriak@p-buriak.RecentFiles">
-    </userSetting>
+    <userSetting name="pavel.buriak@p-buriak.RecentFiles">C:\InTravels\Localization\Localization.resx;C:\InTravels\Localization\Localization.ru.resx;C:\InTravels\Localization\Localization.uk-UA.resx###***###C:\InTravels\Localization\Localization.resx;C:\InTravels\Localization\Localization.ru.resx;C:\InTravels\Localization\Localization.uk-UA.resx</userSetting>
     <userSetting name="PavelVitalievich@PavelPC.filesInitialDir">C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\Localization</userSetting>
     <userSetting name="PavelVitalievich@PavelPC.FindText">
     </userSetting>
@@ -37,10 +36,10 @@
     </description>
   </configuration>
   <fileGroups>
-    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="00000000-0000-0000-0000-000000000000">
-      <file filePath="Localization.resx" absoluteFilePath="C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\Localization\Localization.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
-      <file filePath="Localization.ru.resx" absoluteFilePath="C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\Localization\Localization.ru.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
-      <file filePath="Localization.uk-UA.resx" absoluteFilePath="C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\Localization\Localization.uk-UA.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="ef062385-ff8f-4ab8-8132-e3a491fbc67d">
+      <file filePath="Localization.resx" absoluteFilePath="C:\InTravels\Localization\Localization.resx" uniqueID="9670f560-df52-4e56-a100-93d4cd0109bf" />
+      <file filePath="Localization.ru.resx" absoluteFilePath="C:\InTravels\Localization\Localization.ru.resx" uniqueID="31e0ae5b-d4b5-4bf6-8141-af8f115c8890" />
+      <file filePath="Localization.uk-UA.resx" absoluteFilePath="C:\InTravels\Localization\Localization.uk-UA.resx" uniqueID="c5a4b94e-edcb-4456-86cd-bab2e3a62516" />
       <remarks>
       </remarks>
     </fileGroup>
