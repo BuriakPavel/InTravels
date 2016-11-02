@@ -52,8 +52,8 @@
       <DesignTime>True</DesignTime>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Localization.uk-UA.Designer.cs">
-      <DependentUpon>Localization.uk-UA.resx</DependentUpon>
+    <Compile Include="Localization.uk.Designer.cs">
+      <DependentUpon>Localization.uk.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -74,9 +74,9 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Localization.uk-UA.resx">
+    <EmbeddedResource Include="Localization.uk.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.uk-UA.Designer.cs</LastGenOutput>
+      <LastGenOutput>Localization.uk.Designer.cs</LastGenOutput>
       <CustomToolNamespace>Localizations</CustomToolNamespace>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

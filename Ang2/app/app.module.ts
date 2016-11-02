@@ -16,6 +16,7 @@ import { LeftbarComponent } from './components/layout/leftbar/leftbar.component'
 import { ContainerComponent } from './components/layout/container/container.component';
 import { RightbarComponent } from './components/layout/rightbar/rightbar.component';
 import { FooterComponent } from './components/layout/mainfooter/mainfooter.component';
+import { LoginformComponent } from './components/layout/loginform/loginform.component';
 
 // pages
 import { StartpageComponent } from './components/layout/startpage/startpage.component'
@@ -36,13 +37,13 @@ import { CommentFormComponent } from './components/entities/comment/comment-form
   imports: [ 
     BrowserModule, 
     HttpModule,
-    LocaleModule.forRoot(),
-    LocalizationModule.forRoot(),
+    LocaleModule,
+    LocalizationModule.forChild(),
     AppRoutingModule
     ],
   declarations: [ 
     AppComponent, 
-    StartpageComponent, HomepageComponent, NotFoundPageComponent, 
+    StartpageComponent, HomepageComponent, NotFoundPageComponent, LoginformComponent,
     HeaderComponent, LeftbarComponent, ContainerComponent, RightbarComponent, FooterComponent,
     PostItemComponent, PostListComponent, PostFormComponent,
     CommentItemComponent, CommentListComponent, CommentFormComponent

@@ -168,4 +168,7 @@
 	<data name="Menu_MyAccount_Link" xml:space="preserve">
 		<value>Мой аккаунт</value>
 	</data>
+	<data name="LoginForm_Title" xml:space="preserve">
+		<value>Войти</value>
+	</data>
 </root>

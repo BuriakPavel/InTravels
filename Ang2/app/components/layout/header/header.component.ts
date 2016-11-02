@@ -5,11 +5,13 @@ import { Locale, LocaleService, LocalizationService } from 'angular2localization
     selector: 'header',
     templateUrl: './app/components/layout/header/header.component.html'
 })
-export class HeaderComponent {
-    constructor(public localization: LocalizationService) {
-        // Initializes LocalizationService: asynchronous loading.
-        this.localization.translationProvider('http://localhost/InTravels.WebAPI/api/LocalizationApi?culture=', 'json', true);  // Required: initializes the translation provider with the given path prefix.
-        this.localization.updateTranslation(); // Need to update the translation.
-
+export class HeaderComponent extends Locale {
+    constructor(public locale: LocaleService, public localization: LocalizationService) {
+        super(locale, localization)
+    }
+    // Sets a new locale & currency.
+    public ChangeCulture(language: string, country: string) {
+        this.locale.setCurrentLocale(language, country);
+        //this.locale.setCurrentCurrency(currency);
     }
 }

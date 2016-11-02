@@ -118,54 +118,57 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="ChooseLang" xml:space="preserve">
-    <value>Выбрать</value>
+    <value>Обрати</value>
   </data>
 	<data name="Copyright_Format" xml:space="preserve">
-    <value>Авторское право © {0} - Павел Буряк. Все права защищены.</value>
+    <value>Авторське право © {0} - Павло Буряк. Усi права захищенi.</value>
   </data>
 	<data name="Home_Title_Text" xml:space="preserve">
-    <value>Главная</value>
+    <value>Головна</value>
   </data>
 	<data name="Home_Welcome_ContentText" xml:space="preserve">
-    <value>Добро пожаловать на сайт "InTravels"©!</value>
+    <value>Ласкаво просимо до сайту InTravels©!</value>
   </data>
 	<data name="Menu_About_Link" xml:space="preserve">
-    <value>О сайте</value>
+    <value>Про сайт</value>
   </data>
 	<data name="Menu_Contacts_Link" xml:space="preserve">
-    <value>Контакты</value>
+    <value>Контакти</value>
   </data>
 	<data name="Menu_HelloMessage_Link_Format" xml:space="preserve">
-    <value>Привет, {0}!</value>
+    <value>Привiт, {0}!</value>
   </data>
 	<data name="Menu_Home_Link" xml:space="preserve">
-    <value>Главная</value>
+    <value>Головна</value>
   </data>
 	<data name="Menu_LogIn_Link" xml:space="preserve">
-    <value>Вход</value>
+    <value>Вхiд</value>
   </data>
 	<data name="Menu_LogOff_Link" xml:space="preserve">
-    <value>Выход</value>
+    <value>Вихiд</value>
   </data>
 	<data name="Menu_Register_Link" xml:space="preserve">
-    <value>Регистрация</value>
+    <value>Реєстрація</value>
   </data>
 	<data name="SiteTitle" xml:space="preserve">
-    <value>InTravels.RU</value>
+    <value>InTravels.UA</value>
   </data>
 	<data name="StartPage_GoToTheSite_Button" xml:space="preserve">
-		<value>Перейти на сайт!</value>
+		<value>Перейти до сайту!</value>
 	</data>
 	<data name="StartPage_Tagline_Text" xml:space="preserve">
-		<value>В любом месте, в любое время</value>
+		<value>У будь-якому місці, в будь-який час</value>
 	</data>
 	<data name="HomePage_Tagline_Text" xml:space="preserve">
-		<value>Читайте хорошие истории и делитесь своими</value>
+		<value>Читайте хороші історії та діліться своїми</value>
 	</data>
-	<data name="Posts_Title_Text" xml:space="preserve">
-		<value>Публикации</value>
+	<data name="Menu_MyAccount_Link" xml:space="preserve">
+		<value>Мiй аккаунт </value>
 	</data>
-	<data name="Menu_MyAccount_Title" xml:space="preserve">
-		<value>Мой аккаунт</value>
+	<data name="Menu_Posts_Link" xml:space="preserve">
+		<value>Публiкації</value>
+	</data>
+	<data name="LoginForm_Title" xml:space="preserve">
+		<value>Увiйти</value>
 	</data>
 </root>

@@ -168,4 +168,7 @@
 	<data name="Menu_Posts_Link" xml:space="preserve">
 		<value>Публiкації</value>
 	</data>
+	<data name="LoginForm_Title" xml:space="preserve">
+		<value>Увiйти</value>
+	</data>
 </root>

@@ -4,8 +4,13 @@
 	</video>
 
 	<div class="text-center sitedoor">
-		<h1>In Travels</h1>
-		<button (click)="gotoHome()" class="btn btn-xl btn-primary">Go to the site!</button>
-        <h1>Anywhere, anytime</h1>
+		<h1>{{ 'SiteTitle' | translate:lang }}</h1>
+		<button (click)="gotoHome()" class="btn btn-xl btn-primary">{{ 'StartPage_GoToTheSite_Button' | translate:lang}}</button>
+        <h1>{{ 'StartPage_Tagline_Text' | translate:lang }}</h1>
+		<ul class="nav navbar-nav navbar-right">
+       <li><a class="active" (click)="ChangeCulture('en','US')">EN</a></li>
+       <li><a (click)="ChangeCulture('uk','UA')">UA</a></li>
+       <li><a (click)="ChangeCulture('ru','RU')">RU</a></li>
+    </ul>
 	</div>
 </div>
