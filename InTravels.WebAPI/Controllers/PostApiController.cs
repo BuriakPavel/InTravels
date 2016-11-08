@@ -18,6 +18,7 @@ using System.Web.Http.Description;
 
 namespace InTravels.ControllersApi
 {
+    [RoutePrefix("api/Posts")]
     public class PostApiController : BaseApiController
     {
 		IPostService postService;

@@ -43,12 +43,12 @@ namespace InTravels.BLL.Services
                 };
                 DB.UserProfileManager.Create(userProfile);
                 await DB.SaveAsync();
-                return new OperationDetails(true, "Registration is successfully complete!", "");
+                return new OperationDetails(true, "Registration is successfully complete!", "", null);
 
             }
             else
             {
-                return new OperationDetails(false, "A user with this login already exists", "Email");
+                return new OperationDetails(false, "A user with this login already exists", "Email", null);
             }
         }
 
@@ -58,8 +58,17 @@ namespace InTravels.BLL.Services
 
             ApplicationUser user = await DB.UserManager.FindAsync(userDTO.Email, userDTO.Password);
             if (user != null)
-                claim = await DB.UserManager.CreateIdentityAsync(user,
-                                            DefaultAuthenticationTypes.ApplicationCookie);
+                claim = await DB.UserManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
+            return claim;
+        }
+
+        public async Task<ClaimsIdentity> AuthenticateApi(UserDTO userDTO)
+        {
+            ClaimsIdentity claim = null;
+
+            ApplicationUser user = await DB.UserManager.FindAsync(userDTO.Email, userDTO.Password);
+            if (user != null)
+                claim = await DB.UserManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ExternalBearer);
             return claim;
         }
 
@@ -111,11 +120,11 @@ namespace InTravels.BLL.Services
 				user.UserProfile = Mapper.Map<UserDTO, UserProfile>(userDTO);
 
 				await DB.SaveAsync();
-				return new OperationDetails(true, "Profile updates is successfully complete!", "");
+				return new OperationDetails(true, "Profile updates is successfully complete!", "", null);
 			}
 			else
 			{
-				return new OperationDetails(false, "A user with this login is not already exists", "Email");
+				return new OperationDetails(false, "A user with this login is not already exists", "Email", null);
 			}
 		}
 	}

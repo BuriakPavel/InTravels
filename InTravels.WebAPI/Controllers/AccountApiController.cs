@@ -18,6 +18,8 @@ using InTravels.WebAPI.Results;
 using InTravels.BLL.Interfaces;
 using InTravels.WebAPI.ViewModels;
 using System.Web.Http.Description;
+using InTravels.BLL.DTO;
+using InTravels.BLL.Infrastructure;
 
 namespace InTravels.WebAPI.Controllers
 {
@@ -345,13 +347,20 @@ namespace InTravels.WebAPI.Controllers
                 return BadRequest(ModelState);
             }
 
+            UserDTO userDto = new UserDTO
+            {
+                Email = model.Email,
+                Password = model.Password,
+                UserName = model.Email
+            };
+
+            OperationDetails result = await UserService.CreateUser(userDto);
+
             var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
 
-            IdentityResult result = await UserManager.CreateAsync(user, model.Password);
-
-            if (!result.Succeeded)
+            if (!result.Succedeed)
             {
-                return GetErrorResult(result);
+                return GetErrorResult(new IdentityResult(result.Errors));
             }
 
             return Ok();

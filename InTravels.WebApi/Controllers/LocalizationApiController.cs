@@ -12,6 +12,7 @@ using System.Web.Http;
 
 namespace InTravels.WebAPI.Controllers
 {
+    [RoutePrefix("api/Localization")]
     public class LocalizationApiController : BaseApiController
     {
         public Dictionary<string, string> GetLocalizedStrings(string culture)

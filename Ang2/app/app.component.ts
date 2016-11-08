@@ -4,9 +4,10 @@ import { Locale, LocaleService, LocalizationService } from 'angular2localization
 @Component({
     selector: 'my-app',
     templateUrl: './app/app.component.html',
-    providers:[LocaleService, LocalizationService]
+    providers: [LocaleService, LocalizationService]
 })
 export class AppComponent extends Locale {
+
     constructor(public locale: LocaleService, public localization: LocalizationService) {
         super(locale, localization);
         // Adds the languages (ISO 639 two-letter or three-letter code).
@@ -16,8 +17,11 @@ export class AppComponent extends Locale {
         // Selects the default language and country, regardless of the browser language, to avoid inconsistencies between the language and country.
         this.locale.definePreferredLocale('en', 'US', 30);
 
-        // Initializes LocalizationService: asynchronous loading.
-        this.localization.translationProvider('http://localhost/InTravels.WebAPI/api/LocalizationApi?culture=', 'json', true); // Required: initializes the translation provider with the given path prefix.
+        // Required: initializes the translation provider with the given path prefix.
+
+        // api: 'http://localhost/InTravels.WebAPI/api/LocalizationApi?culture=';
+        this.localization.addProvider('../app/data/localization-', 'json', false);
         this.localization.updateTranslation(); // Need to update the translation.
+
     }
 }

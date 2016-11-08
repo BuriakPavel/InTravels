@@ -7,6 +7,7 @@
 &lt;/XtraSerializer&gt;</globalSetting>
     <globalSetting name="Sort-ResourceEditorGrid">&lt;XtraSerializer version="1.0" application="View"&gt;
   &lt;property name="#LayoutVersion" /&gt;
+  &lt;property name="SortInfo"&gt;~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAF1EZXZFeHByZXNzLlh0cmFHcmlkLnYxNi4xLCBWZXJzaW9uPTE2LjEuNi4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI4OGQxNzU0ZDcwMGU0OWEFAQAAADhEZXZFeHByZXNzLlh0cmFHcmlkLkNvbHVtbnMuR3JpZENvbHVtblNvcnRJbmZvQ29sbGVjdGlvbgQAAAAKZ3JvdXBDb3VudAVjbG9uZQ9jbG9uZUdyb3VwQ291bnQTQ29sbGVjdGlvbkJhc2UrbGlzdAADAAMIsgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW0RldkV4cHJlc3MuWHRyYUdyaWQuQ29sdW1ucy5HcmlkQ29sdW1uU29ydEluZm8sIERldkV4cHJlc3MuWHRyYUdyaWQudjE2LjEsIFZlcnNpb249MTYuMS42LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YV1dCBxTeXN0ZW0uQ29sbGVjdGlvbnMuQXJyYXlMaXN0AgAAAAAAAAAJAwAAAAAAAAAJBAAAAAQDAAAAsgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW0RldkV4cHJlc3MuWHRyYUdyaWQuQ29sdW1ucy5HcmlkQ29sdW1uU29ydEluZm8sIERldkV4cHJlc3MuWHRyYUdyaWQudjE2LjEsIFZlcnNpb249MTYuMS42LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24EAAAwRGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkdyaWRDb2x1bW5Tb3J0SW5mb1tdAgAAAAgICQUAAAAAAAAAAAAAAAQEAAAAHFN5c3RlbS5Db2xsZWN0aW9ucy5BcnJheUxpc3QDAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgUAAAgICQYAAAABAAAABAAAAAcFAAAAAAEAAAAAAAAABC5EZXZFeHByZXNzLlh0cmFHcmlkLkNvbHVtbnMuR3JpZENvbHVtblNvcnRJbmZvAgAAABAGAAAABAAAAAkHAAAADQMMCAAAABlEZXZFeHByZXNzLlh0cmFHcmlkLnYxNi4xBQcAAAAuRGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkdyaWRDb2x1bW5Tb3J0SW5mbwIAAAAJU29ydE9yZGVyCkNvbHVtbk5hbWUAAQgIAAAAAQAAAAYJAAAAB2NvbE5hbWUL&lt;/property&gt;
 &lt;/XtraSerializer&gt;</globalSetting>
     <globalSetting name="ReadOnlyFileOverwriteBehaviour">0</globalSetting>
     <globalSetting name="OmitEmptyItems">True</globalSetting>
@@ -22,11 +23,11 @@
     <globalSetting name="Project-PersistGridSettings">True</globalSetting>
     <globalSetting name="ColorifyNullCells">True</globalSetting>
     <globalSetting name="EnableExcelExportSnapshots">True</globalSetting>
-    <globalSetting name="projectMruItems">&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;items&gt;&lt;item type="0" checksum="1495344443" /&gt;&lt;item type="2" checksum="3609692515" /&gt;&lt;/items&gt;</globalSetting>
+    <globalSetting name="projectMruItems">&lt;?xml version='1.0' encoding='utf-8'?&gt;&lt;items&gt;&lt;item type="0" checksum="1495344443" /&gt;&lt;/items&gt;</globalSetting>
     <userSetting name="pavel.buriak@p-buriak.filesInitialDir">C:\InTravels\Localization</userSetting>
     <userSetting name="pavel.buriak@p-buriak.FindText">
     </userSetting>
-    <userSetting name="pavel.buriak@p-buriak.RecentFiles">C:\InTravels\Localization\Localization.resx;C:\InTravels\Localization\Localization.ru.resx;C:\InTravels\Localization\Localization.uk-UA.resx###***###C:\InTravels\Localization\Localization.resx;C:\InTravels\Localization\Localization.ru.resx;C:\InTravels\Localization\Localization.uk-UA.resx</userSetting>
+    <userSetting name="pavel.buriak@p-buriak.RecentFiles">C:\InTravels\Localization\Localization.resx;C:\InTravels\Localization\Localization.ru.resx;C:\InTravels\Localization\Localization.uk.resx</userSetting>
     <userSetting name="PavelVitalievich@PavelPC.filesInitialDir">C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\Localization</userSetting>
     <userSetting name="PavelVitalievich@PavelPC.FindText">
     </userSetting>
@@ -35,10 +36,10 @@
     </description>
   </configuration>
   <fileGroups>
-    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="00000000-0000-0000-0000-000000000000">
-      <file filePath="Localization.resx" absoluteFilePath="C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\Localization\Localization.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
-      <file filePath="Localization.ru.resx" absoluteFilePath="C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\Localization\Localization.ru.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
-      <file filePath="Localization.uk.resx" absoluteFilePath="C:\Users\buria_000\Documents\Visual Studio 2015\Projects\InTravels\Localization\Localization.uk.resx" uniqueID="00000000-0000-0000-0000-000000000000" />
+    <fileGroup name="" projectFolderUniqueID="00000000-0000-0000-0000-000000000000" orderPosition="0" ignoreDuringExportAndImport="False" uniqueID="5c19e32e-38bb-4b32-8e48-b81a6f7006a1">
+      <file filePath="Localization.resx" absoluteFilePath="C:\InTravels\Localization\Localization.resx" uniqueID="97f6b128-4e9d-4eeb-8f12-b13732b6aaa2" />
+      <file filePath="Localization.ru.resx" absoluteFilePath="C:\InTravels\Localization\Localization.ru.resx" uniqueID="2e84e9fc-4d6a-4dac-a64a-0cafa7a54a84" />
+      <file filePath="Localization.uk.resx" absoluteFilePath="C:\InTravels\Localization\Localization.uk.resx" uniqueID="e270cbc2-4f08-4378-92f2-f1f5ab52a635" />
       <remarks>
       </remarks>
     </fileGroup>

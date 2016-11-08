@@ -1,0 +1,20 @@
+{
+  "Menu_HelloMessage_Link_Format": "Привет, {0}!",
+  "SiteTitle": "InTravels.RU",
+  "Menu_Home_Link": "Главная",
+  "Menu_Posts_Link": "Публикации",
+  "Home_Title_Text": "Главная",
+  "Home_Welcome_ContentText": "Добро пожаловать на сайт InTravels©!",
+  "StartPage_Tagline_Text": "В любом месте, в любое время",
+  "Menu_LogIn_Link": "Вход",
+  "Menu_About_Link": "О сайте",
+  "Menu_Register_Link": "Регистрация",
+  "Menu_LogOff_Link": "Выход",
+  "ChooseLang": "Выбрать",
+  "LoginForm_Title": "Войти",
+  "Menu_Contacts_Link": "Контакты",
+  "StartPage_GoToTheSite_Button": "Перейти на сайт!",
+  "Copyright_Format": "Авторское право © {0} - Павел Буряк. Все права защищены.",
+  "Menu_MyAccount_Link": "Мой аккаунт",
+  "HomePage_Tagline_Text": "Читайте хорошие истории и делитесь своими"
+}

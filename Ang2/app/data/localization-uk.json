@@ -1,0 +1,20 @@
+{
+  "Menu_HelloMessage_Link_Format": "Привiт, {0}!",
+  "SiteTitle": "InTravels.UA",
+  "Menu_Home_Link": "Головна",
+  "Menu_Posts_Link": "Публiкації",
+  "Home_Title_Text": "Головна",
+  "Home_Welcome_ContentText": "Ласкаво просимо до сайту InTravels©!",
+  "StartPage_Tagline_Text": "У будь-якому місці, в будь-який час",
+  "Menu_LogIn_Link": "Вхiд",
+  "Menu_About_Link": "Про сайт",
+  "Menu_Register_Link": "Реєстрація",
+  "Menu_LogOff_Link": "Вихiд",
+  "ChooseLang": "Обрати",
+  "LoginForm_Title": "Увiйти",
+  "Menu_Contacts_Link": "Контакти",
+  "StartPage_GoToTheSite_Button": "Перейти до сайту!",
+  "Copyright_Format": "Авторське право © {0} - Павло Буряк. Усi права захищенi.",
+  "Menu_MyAccount_Link": "Мiй аккаунт ",
+  "HomePage_Tagline_Text": "Читайте хороші історії та діліться своїми"
+}
