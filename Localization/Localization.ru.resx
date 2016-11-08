@@ -169,6 +169,27 @@
 		<value>Мой аккаунт</value>
 	</data>
 	<data name="LoginForm_Title" xml:space="preserve">
+		<value>Вход или Зарегистрироваться</value>
+	</data>
+	<data name="LoginForm_Login_Button" xml:space="preserve">
 		<value>Войти</value>
+	</data>
+	<data name="LoginForm_Register_Button" xml:space="preserve">
+		<value>Зарегистироваться</value>
+	</data>
+	<data name="LoginForm_FirstName_Placeholder" xml:space="preserve">
+		<value>Имя</value>
+	</data>
+	<data name="LoginForm_LastName_Placeholder" xml:space="preserve">
+		<value>Фамилия</value>
+	</data>
+	<data name="LoginForm_Email_Placeholder" xml:space="preserve">
+		<value>Электронная почта</value>
+	</data>
+	<data name="LoginForm_Password_Placeholder" xml:space="preserve">
+		<value>Пароль</value>
+	</data>
+	<data name="LoginForm_ConfirmPassword_Placeholder" xml:space="preserve">
+		<value>Подтверждение пароля</value>
 	</data>
 </root>

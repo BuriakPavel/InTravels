@@ -169,6 +169,27 @@
 		<value>My Account</value>
 	</data>
 	<data name="LoginForm_Title" xml:space="preserve">
+		<value>Login or Registration</value>
+	</data>
+	<data name="LoginForm_Login_Button" xml:space="preserve">
 		<value>Login</value>
+	</data>
+	<data name="LoginForm_Register_Button" xml:space="preserve">
+		<value>Register</value>
+	</data>
+	<data name="LoginForm_FirstName_Placeholder" xml:space="preserve">
+		<value>First name</value>
+	</data>
+	<data name="LoginForm_LastName_Placeholder" xml:space="preserve">
+		<value>Last name</value>
+	</data>
+	<data name="LoginForm_Email_Placeholder" xml:space="preserve">
+		<value>Email</value>
+	</data>
+	<data name="LoginForm_Password_Placeholder" xml:space="preserve">
+		<value>Password</value>
+	</data>
+	<data name="LoginForm_ConfirmPassword_Placeholder" xml:space="preserve">
+		<value>Confirm password</value>
 	</data>
 </root>

@@ -73,3 +73,14 @@ post-item button {
   border-radius: 6px;
   font-size: 18px;
 }
+
+div.modal-dialog input {
+  max-width: 100%;
+  border-width: 2px;
+  border-color: #df691a;
+  border-radius: 5px;
+}
+
+div.modal-header {
+  background-color: #df691a;
+}
