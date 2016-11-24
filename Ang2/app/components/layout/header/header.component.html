@@ -13,7 +13,7 @@
 			<li><a [routerLink]="['/home/posts']">{{ 'Menu_Posts_Link' | translate:lang  }}</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a class="active" (click)="ChangeCulture('en','US')">EN</a></li>
+			<li><a (click)="ChangeCulture('en','US')">EN</a></li>
 			<li><a (click)="ChangeCulture('uk','UA')">UA</a></li>
 			<li><a (click)="ChangeCulture('ru','RU')">RU</a></li>
 		</ul>

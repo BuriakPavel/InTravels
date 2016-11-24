@@ -6,15 +6,15 @@ using InTravels.BLL.DTO;
 
 namespace InTravels.WebAPI.ViewModels
 {
-    public class UserProfileViewModel
-    {
-        public UserDTO User { get; set; }
-        public bool HasPassword { get; set; }
-        public IList<UserLoginInfo> Logins { get; set; }
-        public string PhoneNumber { get; set; }
-        public bool TwoFactor { get; set; }
-        public bool BrowserRemembered { get; set; }
-    }
+    //public class UserProfileViewModel
+    //{
+    //    public UserDTO User { get; set; }
+    //    public bool HasPassword { get; set; }
+    //    public IList<UserLoginInfo> Logins { get; set; }
+    //    public string PhoneNumber { get; set; }
+    //    public bool TwoFactor { get; set; }
+    //    public bool BrowserRemembered { get; set; }
+    //}
 
     public class FactorViewModel
     {

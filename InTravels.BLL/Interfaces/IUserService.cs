@@ -18,5 +18,7 @@ namespace InTravels.BLL.Interfaces
 		UserDTO GetUserByEmail(string email);
         Task<ClaimsIdentity> Authenticate(UserDTO userDTO);
         Task SetInitialData(UserDTO adminDTO, List<string> roles);
+
+
     }
 }

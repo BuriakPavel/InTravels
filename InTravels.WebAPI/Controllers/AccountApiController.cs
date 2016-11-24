@@ -130,7 +130,7 @@ namespace InTravels.WebAPI.Controllers
 
         // POST api/Account/ChangePassword
         [Route("ChangePassword")]
-        [ApiExplorerSettings(IgnoreApi = true)]
+        [ApiExplorerSettings(IgnoreApi = false)]
         public async Task<IHttpActionResult> ChangePassword(ChangePasswordBindingModel model)
         {
             if (!ModelState.IsValid)

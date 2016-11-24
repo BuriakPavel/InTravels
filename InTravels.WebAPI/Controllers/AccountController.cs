@@ -13,6 +13,7 @@ using InTravels.BLL.Infrastructure;
 using InTravels.WebAPI.Controllers;
 using InTravels.WebAPI.ViewModels;
 using InTravels.WebAPI.Models;
+using AutoMapper;
 
 namespace InTravels.Controllers
 {
@@ -31,8 +32,11 @@ namespace InTravels.Controllers
 		public ActionResult Index()
 		{
 			UserDTO user = UserService.GetUserByEmail(AuthenticationManager.User.Identity.Name);
-			UserProfileViewModel userModel = new UserProfileViewModel() { User = user };
-			return View(userModel);
+
+            Mapper.Initialize(cfg => cfg.CreateMap<UserDTO, UserProfileViewModel>());
+            var userProfileVM = Mapper.Map<UserDTO, UserProfileViewModel>(user);
+
+			return View(userProfileVM);
 		}
 
 		[Authorize]
@@ -120,7 +124,11 @@ namespace InTravels.Controllers
 							IsPersistent = true
 						}, claim);
 						ViewBag.StatusMessage = "Registration is succsessfuly complete!";
-						return RedirectToAction("Index", new UserProfileViewModel() { User = userDto });
+
+                        Mapper.Initialize(cfg => cfg.CreateMap<UserDTO, UserProfileViewModel>());
+                        var userProfileVM = Mapper.Map<UserDTO, UserProfileViewModel>(userDto);
+
+                        return RedirectToAction("Index", userProfileVM);
 					}
 				}
 				else
