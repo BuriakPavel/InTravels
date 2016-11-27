@@ -20,6 +20,7 @@ using InTravels.WebAPI.ViewModels;
 using System.Web.Http.Description;
 using InTravels.BLL.DTO;
 using InTravels.BLL.Infrastructure;
+using System.Linq;
 
 namespace InTravels.WebAPI.Controllers
 {
@@ -342,11 +343,14 @@ namespace InTravels.WebAPI.Controllers
         [Route("Register")]
         public async Task<IHttpActionResult> Register(RegisterBindingModel model)
         {
+            Dictionary<string, object> resultJson = new Dictionary<string, object>();
+
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                resultJson.Add("errors", ModelState.Where(x => x.Value.Errors.Any()).Select(y => new { y.Key, y.Value.Errors }).ToList());
+                return Json(resultJson);
             }
-
+           
             UserDTO userDto = new UserDTO
             {
                 Email = model.Email,
@@ -360,10 +364,11 @@ namespace InTravels.WebAPI.Controllers
 
             if (!result.Succedeed)
             {
-                return GetErrorResult(new IdentityResult(result.Errors));
+                resultJson.Add("errors", new KeyValuePair<string, string>(result.Property, result.Message));
+                return Json(resultJson);
             }
 
-            return Ok();
+            return Json("ok");
         }
 
         // POST api/Account/RegisterExternal

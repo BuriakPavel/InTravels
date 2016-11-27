@@ -9,9 +9,6 @@ namespace InTravels.BLL.Infrastructure
 {
     public class OperationDetails
     {
-        public OperationDetails() : base()
-        { }
-
         public OperationDetails(bool succedeed, string message, string prop, IEnumerable<string> errors)
         {
             Succedeed = succedeed;

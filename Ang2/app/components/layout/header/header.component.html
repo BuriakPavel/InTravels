@@ -17,6 +17,7 @@
 			<li><a (click)="ChangeCulture('uk','UA')">UA</a></li>
 			<li><a (click)="ChangeCulture('ru','RU')">RU</a></li>
 		</ul>
+		<loginform #loginFormModal></loginform>
 		<!--<form class="navbar-form navbar-right" role="search">
       <div class="form-group input-group">
         <input type="text" class="form-control" placeholder="Search..">
@@ -28,9 +29,11 @@
       </div>
     </form>-->
 		<ul class="nav navbar-nav navbar-right">
-			<li data-toggle="modal" data-target="#loginForm">
-				<a><span class="glyphicon glyphicon-user"></span>{{ 'Menu_MyAccount_Link' | translate:lang  }}</a>
+			<li *ngIf="!isAutenticate()"><a (click)="openLoginForm()">{{ 'LoginForm_Title' | translate:lang  }}</a></li>
+			<li *ngIf="isAutenticate()">
+				<a [routerLink]="['/home/profile']"><span class="glyphicon glyphicon-user"></span>{{ 'Menu_MyAccount_Link' | translate:lang  }}</a>
 			</li>
+			<li *ngIf="isAutenticate()"><a (click)="logout()">Logout</a></li>
 		</ul>
 	</div>
 </div>

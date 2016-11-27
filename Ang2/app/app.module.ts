@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { LocaleModule, LocalizationModule } from 'angular2localization';
+import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
 
 import { AppRoutingModule } from '../app/app-routing.module';
 
@@ -36,7 +37,6 @@ import { CommentItemComponent } from './components/entities/comment/comment-item
 import { CommentListComponent } from './components/entities/comment/comment-list/comment-list.component';
 import { CommentFormComponent } from './components/entities/comment/comment-form/comment-form.component';
 
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -44,6 +44,7 @@ import { CommentFormComponent } from './components/entities/comment/comment-form
     FormsModule,
     LocaleModule,
     LocalizationModule.forChild(),
+    Ng2Bs3ModalModule,
     AppRoutingModule
   ],
   providers: [

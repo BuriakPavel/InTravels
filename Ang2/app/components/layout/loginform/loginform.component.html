@@ -1,86 +1,145 @@
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">×</button>
-				<h4><span class="glyphicon glyphicon-"></span>
-				{{ 'LoginForm_Title' | translate : lang }}</h4>
+<modal [animation]="animation" [keyboard]="keyboard" [backdrop]="backdrop" #loginformModal>
+	<form name="form" #f="ngForm" novalidate>
+		<modal-header [show-close]="true">
+			<h4>
+				<span class="glyphicon glyphicon-"></span> {{ 'LoginForm_Title' | translate : lang }}
+			</h4>
+			<ul class="nav nav-tabs row">
+				<li class="col-md-6" [ngClass]="{active: model.isRegisterMode}">
+					<a (click)="changeTab()">
+					{{ 'LoginForm_RegisterTitle' | translate : lang }}
+					</a>
+				</li>
+				<li class="col-md-6" [ngClass]="{active: model.isLoginMode}">
+					<a (click)="changeTab()">
+					{{ 'LoginForm_LoginTitle' | translate : lang }} 
+					</a>
+				</li>
+			</ul>
+		</modal-header>
+		<modal-body *ngIf="model.isLoginMode">
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i *ngIf="username.valid" class="glyphicon glyphicon-ok"></i>
+						<i *ngIf="!username.valid" class="glyphicon glyphicon-remove"></i>
+					</span>
+					<input type="text" class="form-control" name="username" placeholder="{{ 'LoginForm_Email_Placeholder' | translate : lang }}"
+						[(ngModel)]="model.username" #username="ngModel" required pattern="[a-zA-Z_]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}" />
+				</div>
+				<div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
 			</div>
-			<div class="modal-body">
-				<!--<form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
-					<div class="row">
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<div class="form-group">
-								<input type="text" name="first_name" class="form-control input" 
-								placeholder="{{ 'LoginForm_FirstName_Placeholder' | translate : lang }}">
-							</div>
-						</div>
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<div class="form-group">
-								<input type="text" name="last_name" class="form-control input" 
-								placeholder="{{ 'LoginForm_LastName_Placeholder' | translate : lang }}">
-							</div>
-						</div>
-					</div>
-					<div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
-						<input type="email" class="form-control input" name="username"
-						[(ngModel)]="model.username" #username="ngModel" required 
-						placeholder="{{ 'LoginForm_Email_Placeholder' | translate : lang }}">
-						<div *ngIf="f.submitted && !username.valid" class="help-block">Email is required</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
-								<input type="password" name="password" class="form-control input" 
-								[(ngModel)]="model.password" #password="ngModel" required 
-								placeholder="{{ 'LoginForm_Password_Placeholder' | translate : lang }}">
-								 <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
-							</div>
-						</div>
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<div class="form-group">
-								<input type="password" name="password_confirmation" class="form-control input" 
-								placeholder="{{ 'LoginForm_ConfirmPassword_Placeholder' | translate : lang }}"/>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<div class="form-group">
-								<button [disabled]="loading" type="button" class="btn btn-md btn-info btn-block">
-									{{ 'LoginForm_Login_Button' | translate : lang }}
-								</button>
-								<img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-      
-							</div>
-						</div>
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<div class="form-group">
-								<button type="button" class="btn btn-md btn-info btn-block">
-									{{ 'LoginForm_Register_Button' | translate : lang }}
-								</button>
-							</div>
-						</div>
-					</div>
-					<div *ngIf="error" class="alert alert-danger">{{error}}</div>
-				</form>
-				-->
-				<form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
-        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
-            <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
-        </div>
-        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
-            <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
-        </div>
-        <div class="form-group">
-            <button class="btn btn-primary">Login</button>
-            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-        </div>
-        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
-    </form>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i *ngIf="password.valid" class="glyphicon glyphicon-ok"></i>
+						<i *ngIf="!password.valid" class="glyphicon glyphicon-remove"></i>
+					</span>
+					<input type="password" class="form-control" name="password" placeholder="{{ 'LoginForm_Password_Placeholder' | translate : lang }}"
+						[(ngModel)]="model.password" #password="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$"
+					/>
+				</div>
+				<div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
 			</div>
-		</div>
-	</div>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i *ngIf="confirmPassword.valid" class="glyphicon glyphicon-ok"></i>
+						<i *ngIf="!confirmPassword.valid" class="glyphicon glyphicon-remove"></i>
+					</span>
+					<input type="password" class="form-control" name="confirmPassword" placeholder="{{ 'LoginForm_ConfirmPassword_Placeholder' | translate : lang }}"
+						[(ngModel)]="model.confirmPassword" #confirmPassword="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$"
+					/>
+				</div>
+				<div *ngIf="f.submitted && !confirmPassword.valid" class="help-block">Confirm password is required</div>
+			</div>
+			<div *ngIf="model.errors" class="alert alert-danger">{{model.errors}}</div>
+		</modal-body>
+		<modal-footer *ngIf="model.isLoginMode">
+			<img *ngIf="model.isDataLoading" style="max-height:30px;" src="content/images/loader.gif" />
+			<button (click)="login()" [disabled]="model.isDataLoading || !f.form.valid" class="btn btn-md btn-info btn-block">
+				{{ 'LoginForm_Login_Button' | translate : lang }}
+			</button>
+		</modal-footer>
+		<modal-body *ngIf="model.isRegisterMode">
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6">
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i *ngIf="regFirstName.valid" class="glyphicon glyphicon-ok"></i>
+								<i *ngIf="!regFirstName.valid" class="glyphicon glyphicon-remove"></i>
+							</span>
+							<input type="text" name="regFirstName" class="form-control input" placeholder="{{ 'LoginForm_FirstName_Placeholder' | translate : lang }}"
+								[(ngModel)]="model.regFirstName" #regFirstName="ngModel" />
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6">
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i *ngIf="regLastName.valid" class="glyphicon glyphicon-ok"></i>
+								<i *ngIf="!regLastName.valid" class="glyphicon glyphicon-remove"></i>
+							</span>
+							<input type="text" name="regLastName" class="form-control input" placeholder="{{ 'LoginForm_LastName_Placeholder' | translate : lang }}"
+								[(ngModel)]="model.regLastName" #regLastName="ngModel" />
+						</div>
+					</div>
+					<div class="input-group">
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i *ngIf="regLogin.valid" class="glyphicon glyphicon-ok"></i>
+						<i *ngIf="!regLogin.valid" class="glyphicon glyphicon-remove"></i>
+					</span>
+					<input type="text" class="form-control" name="regLogin" placeholder="{{ 'LoginForm_Email_Placeholder' | translate : lang }}"
+						[(ngModel)]="model.regLogin" #regLogin="ngModel" required pattern="[a-zA-Z_]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}" />
+				</div>
+				<div *ngIf="f.submitted && !regLogin.valid" class="help-block">Username is required</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6">
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i *ngIf="regPassword.valid" class="glyphicon glyphicon-ok"></i>
+								<i *ngIf="!regPassword.valid" class="glyphicon glyphicon-remove"></i>
+							</span>
+							<input type="password" class="form-control" name="regPassword" placeholder="{{ 'LoginForm_Password_Placeholder' | translate : lang }}"
+								[(ngModel)]="model.regPassword" #regPassword="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$"
+							/>
+						</div>
+						<div *ngIf="f.submitted && !regPassword.valid" class="help-block">Password is required</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-6 col-md-6">
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i *ngIf="regConfirmPassword.valid" class="glyphicon glyphicon-ok"></i>
+								<i *ngIf="!regConfirmPassword.valid" class="glyphicon glyphicon-remove"></i>
+							</span>
+							<input type="password" class="form-control" name="regConfirmPassword" placeholder="{{ 'LoginForm_ConfirmPassword_Placeholder' | translate : lang }}"
+								[(ngModel)]="model.regConfirmPassword" #regConfirmPassword="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$"
+							/>
+						</div>
+						<div *ngIf="f.submitted && !regConfirmPassword.valid" class="help-block">Confirm password is required</div>
+					</div>
+				</div>
+			</div>
+			<div *ngIf="error" class="alert alert-danger">{{model.regErrors}}</div>
+		</modal-body>
+		<modal-footer *ngIf="model.isRegisterMode">
+			<div class="form-group">
+				<img *ngIf="model.isDataLoading" style="max-height:30px;" src="content/images/loader.gif" />
+				<button (click)="register()" [disabled]="model.isDataLoading || !f.form.valid" class="btn btn-md btn-info btn-block">
+						{{ 'LoginForm_Register_Button' | translate : lang }}
+				</button>
+			</div>
+		</modal-footer>
+	</form>
+</modal>

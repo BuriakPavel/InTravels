@@ -25,6 +25,7 @@
 
       // other libraries
       'rxjs':                       'npm:rxjs',
+      'ng2-bs3-modal': 'npm:ng2-bs3-modal',
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
       'angular2localization': 'npm:angular2localization/bundles/angular2localization.umd.js'
     },
@@ -36,6 +37,9 @@
       },
       rxjs: {
         defaultExtension: 'js'
+      },
+      'ng2-bs3-modal': {
+      defaultExtension: 'js'
       },
       'angular2-in-memory-web-api': {
         main: './index.js',
