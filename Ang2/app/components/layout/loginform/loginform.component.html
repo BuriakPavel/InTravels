@@ -40,18 +40,14 @@
 					/>
 				</div>
 				<div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+			<div class="help-block">
+				<ul>{{ 'LoginForm_Password_Description' | translate : lang }}
+					<li>{{ 'LoginForm_Password_Description_1' | translate : lang }}</li>	
+					<li>{{ 'LoginForm_Password_Description_2' | translate : lang }}</li>	
+					<li>{{ 'LoginForm_Password_Description_3' | translate : lang }}</li>	
+					<li>{{ 'LoginForm_Password_Description_4' | translate : lang }}</li>	
+				</ul>
 			</div>
-			<div class="form-group">
-				<div class="input-group">
-					<span class="input-group-addon">
-						<i *ngIf="confirmPassword.valid" class="glyphicon glyphicon-ok"></i>
-						<i *ngIf="!confirmPassword.valid" class="glyphicon glyphicon-remove"></i>
-					</span>
-					<input type="password" class="form-control" name="confirmPassword" placeholder="{{ 'LoginForm_ConfirmPassword_Placeholder' | translate : lang }}"
-						[(ngModel)]="model.confirmPassword" #confirmPassword="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$"
-					/>
-				</div>
-				<div *ngIf="f.submitted && !confirmPassword.valid" class="help-block">Confirm password is required</div>
 			</div>
 			<div *ngIf="model.errors" class="alert alert-danger">{{model.errors}}</div>
 		</modal-body>
@@ -130,6 +126,14 @@
 						<div *ngIf="f.submitted && !regConfirmPassword.valid" class="help-block">Confirm password is required</div>
 					</div>
 				</div>
+			</div>
+			<div class="help-block">
+				<ul>{{ 'LoginForm_Password_Description' | translate : lang }}
+					<li>{{ 'LoginForm_Password_Description_1' | translate : lang }}</li>	
+					<li>{{ 'LoginForm_Password_Description_2' | translate : lang }}</li>	
+					<li>{{ 'LoginForm_Password_Description_3' | translate : lang }}</li>	
+					<li>{{ 'LoginForm_Password_Description_4' | translate : lang }}</li>	
+				</ul>
 			</div>
 			<div *ngIf="error" class="alert alert-danger">{{model.regErrors}}</div>
 		</modal-body>

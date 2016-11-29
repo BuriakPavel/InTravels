@@ -109,7 +109,6 @@ export class LoginFormModel {
     
     username: string;
     password: string;
-    confirmPassword: string;
     errors: FormsErrors;
     regErrors: FormsErrors;
 

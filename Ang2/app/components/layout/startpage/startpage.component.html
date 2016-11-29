@@ -1,16 +1,19 @@
 <div class="startpage">
-	<video id="start-video" onclick="this.paused ? this.play() : this.pause();" autoplay="" loop="" muted="" poster="content/images/TravelAdventure.png">
-		<source src="content/video/TravelAdventure.mp4#t=3.24" type="video/mp4"> Your browser does not support the video tag. I suggest you upgrade your browser.
+	<video #video id="start-video" autoplay="" loop="" mute="" poster="content/images/TravelAdventure.png">
+		<source src="content/video/TravelAdventure.mp4#t=3.24" type="video/mp4">
 	</video>
 
 	<div class="text-center sitedoor">
+
 		<h1>{{ 'SiteTitle' | translate:lang }}</h1>
+
 		<button (click)="gotoHome()" class="btn btn-xl btn-primary">{{ 'StartPage_GoToTheSite_Button' | translate:lang}}</button>
-        <h1>{{ 'StartPage_Tagline_Text' | translate:lang }}</h1>
-		<ul class="nav navbar-nav navbar-right">
-       <li><a class="active" (click)="ChangeCulture('en','US')">EN</a></li>
-       <li><a (click)="ChangeCulture('uk','UA')">UA</a></li>
-       <li><a (click)="ChangeCulture('ru','RU')">RU</a></li>
-    </ul>
+		
+		<h1>{{ 'StartPage_Tagline_Text' | translate:lang }}</h1>
+		
+		<button class="btn btn-md btn-primary" *ngIf="played"><span (click)="playStopVideo(video)" class="glyphicon glyphicon-pause"></span></button>
+		<button class="btn btn-md btn-primary" *ngIf="!played"><span (click)="playStopVideo(video)" class="glyphicon glyphicon-play"></span></button>
+		<button class="btn btn-md btn-primary" *ngIf="video.volume == 1"><span (click)="videoVolume(video)" class="text-right glyphicon glyphicon-volume-up"></span></button>
+		<button class="btn btn-md btn-primary" *ngIf="video.volume == 0"><span (click)="videoVolume(video)" class="text-right glyphicon glyphicon-volume-off"></span></button>
 	</div>
 </div>

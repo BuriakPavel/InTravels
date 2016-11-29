@@ -1,6 +1,12 @@
-<div class="well">
-    <p><a data-toggle="modal" data-target="#loginForm">My Profile</a></p>
-    <img src="content/images/male-1.png" class="img-circle" height="65" width="65" alt="Avatar">
+<div class="alert alert-info fade in" *ngIf="!isAutenticate()">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a> {{ 'LeftBar_YouAreNotAuthorize' | translate:lang
+    }}
+</div>
+<div *ngIf="isAutenticate()" class="well">
+    <p>
+        <a [routerLink]="['/home/profile']">{{ 'Menu_MyAccount_Link' | translate:lang  }}</a>
+        <img src="content/images/male-1.png" class="img-circle" height="65" width="65" alt="Avatar">
+    </p>
 </div>
 <div class="well">
     <p><a href="#">Interests</a></p>

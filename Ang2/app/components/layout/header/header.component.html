@@ -33,7 +33,7 @@
 			<li *ngIf="isAutenticate()">
 				<a [routerLink]="['/home/profile']"><span class="glyphicon glyphicon-user"></span>{{ 'Menu_MyAccount_Link' | translate:lang  }}</a>
 			</li>
-			<li *ngIf="isAutenticate()"><a (click)="logout()">Logout</a></li>
+			<li *ngIf="isAutenticate()"><a (click)="logout()">{{ 'Menu_LogOff_Link' | translate:lang  }}</a></li>
 		</ul>
 	</div>
 </div>

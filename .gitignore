@@ -185,3 +185,10 @@ InTravels.BLL/obj/Release/InTravels.BLL.dll
 InTravels.BLL/obj/Release/InTravels.BLL.pdb
 Ang2/out/chrome/*.*
 Ang2/out/chrome/
+InTravels.WebApi/bin/Localization.uk.resx
+InTravels.WebApi/bin/uk/Localization.resources.dll
+Localization/bin/Debug/Localization.uk.resx
+Localization/bin/Debug/uk/Localization.resources.dll
+Localization/obj/Debug/Localization.Localization.uk.resources
+Localization/obj/Debug/uk/Localization.resources.dll
+.vs/InTravels/v14/.suo

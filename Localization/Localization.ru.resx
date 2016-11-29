@@ -121,7 +121,7 @@
     <value>Выбрать</value>
   </data>
 	<data name="Copyright_Format" xml:space="preserve">
-    <value>Авторское право © {0} - Павел Буряк. Все права защищены.</value>
+    <value>Авторское право © 2016 - Павел Буряк. Все права защищены.</value>
   </data>
 	<data name="Home_Title_Text" xml:space="preserve">
     <value>Главная</value>
@@ -169,7 +169,7 @@
 		<value>Мой аккаунт</value>
 	</data>
 	<data name="LoginForm_Title" xml:space="preserve">
-		<value>Вход или Зарегистрироваться</value>
+		<value>Вход или регистрация</value>
 	</data>
 	<data name="LoginForm_Login_Button" xml:space="preserve">
 		<value>Войти</value>
@@ -191,5 +191,29 @@
 	</data>
 	<data name="LoginForm_ConfirmPassword_Placeholder" xml:space="preserve">
 		<value>Подтверждение пароля</value>
+	</data>
+	<data name="LoginForm_Password_Description" xml:space="preserve">
+		<value>Пароль должен иметь:</value>
+	</data>
+	<data name="LoginForm_Password_Description_1" xml:space="preserve">
+		<value>- длину 8 - 15 символов;</value>
+	</data>
+	<data name="LoginForm_Password_Description_2" xml:space="preserve">
+		<value>- минимум одну цифру;</value>
+	</data>
+	<data name="LoginForm_Password_Description_3" xml:space="preserve">
+		<value>- минимум один спецсимвол;</value>
+	</data>
+	<data name="LoginForm_Password_Description_4" xml:space="preserve">
+		<value>- минимум один строчной и один заглавный символ;</value>
+	</data>
+	<data name="LoginForm_RegisterTitle" xml:space="preserve">
+		<value>Регистрация</value>
+	</data>
+	<data name="LoginForm_LoginTitle" xml:space="preserve">
+		<value>Вход</value>
+	</data>
+	<data name="LeftBar_YouAreNotAuthorize" xml:space="preserve">
+		<value>Вы не авторизовались на сайте. Пожалуйста, войдите или зарегистрируйтесь.</value>
 	</data>
 </root>

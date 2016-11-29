@@ -121,7 +121,7 @@
     <value>Select</value>
   </data>
 	<data name="Copyright_Format" xml:space="preserve">
-    <value>Copyright © {0} - Pavel Buriak. All rights reserved.</value>
+    <value>Copyright © 2016 - Pavel Buriak. All rights reserved.</value>
   </data>
 	<data name="Home_Title_Text" xml:space="preserve">
     <value>Homepage</value>
@@ -169,7 +169,7 @@
 		<value>My Account</value>
 	</data>
 	<data name="LoginForm_Title" xml:space="preserve">
-		<value>Login or Registration</value>
+		<value>Login or registration</value>
 	</data>
 	<data name="LoginForm_Login_Button" xml:space="preserve">
 		<value>Login</value>
@@ -191,5 +191,29 @@
 	</data>
 	<data name="LoginForm_ConfirmPassword_Placeholder" xml:space="preserve">
 		<value>Confirm password</value>
+	</data>
+	<data name="LoginForm_Password_Description" xml:space="preserve">
+		<value>The password should consist of:</value>
+	</data>
+	<data name="LoginForm_Password_Description_1" xml:space="preserve">
+		<value>- length of 8 - 15 symbols;</value>
+	</data>
+	<data name="LoginForm_Password_Description_2" xml:space="preserve">
+		<value>- minimum one digit;</value>
+	</data>
+	<data name="LoginForm_Password_Description_3" xml:space="preserve">
+		<value>- minimum one special symbol;</value>
+	</data>
+	<data name="LoginForm_Password_Description_4" xml:space="preserve">
+		<value>- minimum one lowercase and one uppercase symbols;</value>
+	</data>
+	<data name="LoginForm_LoginTitle" xml:space="preserve">
+		<value>Login</value>
+	</data>
+	<data name="LoginForm_RegisterTitle" xml:space="preserve">
+		<value>Registration</value>
+	</data>
+	<data name="LeftBar_YouAreNotAuthorize" xml:space="preserve">
+		<value>You are not authorize at the site. Login or register, please.</value>
 	</data>
 </root>
