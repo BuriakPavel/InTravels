@@ -12,12 +12,17 @@ import { AuthenticationService } from '../../../services/authentication.service'
 export class HeaderComponent extends Locale {
     @ViewChild('loginFormModal')
     loginFormModal: ModalComponent;
+
+    activeLang: string;
+
     constructor(public locale: LocaleService, public localization: LocalizationService, private authenticationService: AuthenticationService, private router: Router) {
         super(locale, localization)
+        this.activeLang = this.locale.getCurrentLanguage();
     }
     // Sets a new locale & currency.
     public ChangeCulture(language: string, country: string) {
         this.locale.setCurrentLocale(language, country);
+        this.activeLang = language;
         //this.locale.setCurrentCurrency(currency);
     }
 

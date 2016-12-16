@@ -13,9 +13,15 @@
 			<li><a [routerLink]="['/home/posts']">{{ 'Menu_Posts_Link' | translate:lang  }}</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a (click)="ChangeCulture('en','US')">EN</a></li>
-			<li><a (click)="ChangeCulture('uk','UA')">UA</a></li>
-			<li><a (click)="ChangeCulture('ru','RU')">RU</a></li>
+			<li class="flag-item" (click)="ChangeCulture('en','US')" [ngClass]="{'active': activeLang == 'en' }">
+				<a> <img src="content/images/en-flag-icon.png" /> </a>
+			</li>
+			<li class="flag-item" (click)="ChangeCulture('uk','UA')" [ngClass]="{'active': activeLang == 'uk' }">
+				<a> <img src="content/images/ua-flag-icon.png" /> </a>
+			</li>
+			<li class="flag-item" (click)="ChangeCulture('ru','RU')" [ngClass]="{'active': activeLang == 'ru' }">
+				<a> <img src="content/images/ru-flag-icon.png" /> </a>
+			</li>
 		</ul>
 		<loginform #loginFormModal></loginform>
 		<!--<form class="navbar-form navbar-right" role="search">

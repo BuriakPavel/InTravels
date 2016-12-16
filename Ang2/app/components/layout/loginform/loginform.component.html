@@ -1,19 +1,19 @@
 <modal [animation]="animation" [keyboard]="keyboard" [backdrop]="backdrop" #loginformModal>
 	<form name="form" #f="ngForm" novalidate>
 		<modal-header [show-close]="true">
-			<h4>
+			<h4 class="text-center">
 				<span class="glyphicon glyphicon-"></span> {{ 'LoginForm_Title' | translate : lang }}
 			</h4>
 			<ul class="nav nav-tabs row">
-				<li class="col-md-6" [ngClass]="{active: model.isRegisterMode}">
-					<a (click)="changeTab()">
+				<li class="col-md-6 form-tab left" [ngClass]="{'tab-active': model.isRegisterMode}">
+					<p (click)="changeTab()">
 					{{ 'LoginForm_RegisterTitle' | translate : lang }}
-					</a>
+					</p>
 				</li>
-				<li class="col-md-6" [ngClass]="{active: model.isLoginMode}">
-					<a (click)="changeTab()">
+				<li class="col-md-6 form-tab right" [ngClass]="{'tab-active': model.isLoginMode}">
+					<p class="text-right" (click)="changeTab()">
 					{{ 'LoginForm_LoginTitle' | translate : lang }} 
-					</a>
+					</p>
 				</li>
 			</ul>
 		</modal-header>

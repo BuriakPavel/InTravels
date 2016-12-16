@@ -28,9 +28,4 @@ export class StartpageComponent extends Locale implements OnInit {
     public videoVolume(video: any){
         video.volume = (video.volume - 1) * -1;
     }
-
-    public ChangeCulture(language: string, country: string) {
-        this.locale.setCurrentLocale(language, country);
-        //this.locale.setCurrentCurrency(currency);
-    }
 }

@@ -74,6 +74,13 @@ post-item button {
   font-size: 18px;
 }
 
+.flag-item {
+    min-width: 24px;
+    min-height: 24px;
+    margin: 2px;    
+}
+
+
 div.modal-dialog input {
   max-width: 100%;
   border-width: 2px;
@@ -82,5 +89,27 @@ div.modal-dialog input {
 }
 
 div.modal-header {
-  background-color: #df691a;
+  background-color: #2b3e50;
+  padding-bottom: 0px;
+}
+
+
+
+.form-tab {
+    border-bottom: 50px solid #2b3e50;
+    height: 0;
+    line-height: 50px;
+    cursor: pointer;    
+}
+
+.form-tab.left {
+    border-right: 40px solid #2b3e50;
+}
+
+.form-tab.right {
+    border-left: 40px solid #2b3e50;
+}
+ 
+.form-tab.tab-active {
+    border-bottom: 50px solid #df691a;
 }
