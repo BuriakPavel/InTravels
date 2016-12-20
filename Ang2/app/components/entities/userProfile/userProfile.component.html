@@ -1,4 +1,126 @@
-﻿<div class="col-md-6 col-md-offset-3">
-    <h1>User profile</h1>
-    <p>You're logged in with JWT!!</p>
+﻿<div class="card hovercard">
+    <div class="card-background">
+        <img class="card-bkimg" alt="" src="http://lorempixel.com/100/100/people/9/">
+        <!-- http://lorempixel.com/850/280/people/9/ -->
+    </div>
+    <div class="useravatar">
+        <img alt="" src="http://lorempixel.com/100/100/people/9/">
+    </div>
+    <div class="card-info"> <span class="card-title">Pamela Anderson</span>
+
+    </div>
+</div>
+<div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+    <div class="btn-group" role="group">
+        <button type="button" id="stars" href="#tab1" data-toggle="tab" (click)="setActiveTab(1)" class="btn" [ngClass]="{'btn-primary': activeTab == 1, 'btn-default': activeTab != 1}">
+                <span class="fa fa-newspaper-o" aria-hidden="true"></span>
+                <div class="hidden-xs">My Posts</div>
+        </button>
+    </div>
+    <div class="btn-group" role="group">
+        <button type="button" id="favorites" href="#tab2" data-toggle="tab" (click)="setActiveTab(2)" class="btn" [ngClass]="{'btn-primary': activeTab == 2, 'btn-default': activeTab != 2}">
+                <span class="fa fa-users" aria-hidden="true"></span>
+                <div class="hidden-xs">Friends</div>
+            </button>
+    </div>
+    <div class="btn-group" role="group">
+        <button type="button" id="following" class="btn" href="#tab3" data-toggle="tab" (click)="setActiveTab(3)" class="btn" [ngClass]="{'btn-primary': activeTab == 3, 'btn-default': activeTab != 3}">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                <div class="hidden-xs">Edit profile</div>
+            </button>
+    </div>
+</div>
+
+<div class="well">
+    <div class="tab-content">
+        <div class="tab-pane fade in" [ngClass]="{'active': activeTab == 1}" id="tab1">
+            <h3>My Posts</h3>
+        </div>
+        <div class="tab-pane fade in" [ngClass]="{'active': activeTab == 2}" id="tab2">
+            <h3>Friends</h3>
+        </div>
+        <div class="tab-pane fade in" [ngClass]="{'active': activeTab == 3}" id="tab3">
+            <div class="row">
+                <!-- edit form column -->
+                <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+                    <div class="alert alert-info alert-dismissable">
+                        <a class="panel-close close" data-dismiss="alert">×</a>
+                        <i class="fa fa-coffee"></i> This is an <strong>.alert</strong>. Use this to show important messages
+                        to the user.
+                    </div>
+                    <h3>Personal info</h3>
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">First name:</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" value="Jane" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Last name:</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" value="Bishop" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Email:</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" value="janesemail@gmail.com" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Time Zone:</label>
+                            <div class="col-lg-8">
+                                <div class="ui-select">
+                                    <select id="user_time_zone" class="form-control">
+                <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                <option value="Alaska">(GMT-09:00) Alaska</option>
+                <option value="Pacific Time (US & Canada)">(GMT-08:00) Pacific Time (US & Canada)</option>
+                <option value="Arizona">(GMT-07:00) Arizona</option>
+                <option value="Mountain Time (US & Canada)">(GMT-07:00) Mountain Time (US & Canada)</option>
+                <option value="Central Time (US & Canada)" selected="selected">(GMT-06:00) Central Time (US & Canada)</option>
+                <option value="Eastern Time (US & Canada)">(GMT-05:00) Eastern Time (US & Canada)</option>
+                <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+              </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Username:</label>
+                            <div class="col-md-8">
+                                <input class="form-control" value="janeuser" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Password:</label>
+                            <div class="col-md-8">
+                                <input class="form-control" value="11111122333" type="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Confirm password:</label>
+                            <div class="col-md-8">
+                                <input class="form-control" value="11111122333" type="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label"></label>
+                            <div class="col-md-8">
+                                <input class="btn btn-primary" value="Save Changes" type="button">
+                                <span></span>
+                                <input class="btn btn-default" value="Cancel" type="reset">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="text-center">
+                        <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar">
+                        <h6>Upload a different photo...</h6>
+                        <input type="file" class="text-center center-block well well-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

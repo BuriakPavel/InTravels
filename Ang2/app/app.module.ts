@@ -30,6 +30,7 @@ import { NotFoundPageComponent } from './components/layout/notFoundPage/notFound
 // entities components
 import { AppComponent }  from './app.component';
 import { UserProfileComponent } from './components/entities/userProfile/userProfile.component';
+import { UserWidgetComponent } from './components/entities/userProfile/userWidget.component';
 import { PostItemComponent } from './components/entities/post/post-item/post-item.component';
 import { PostListComponent } from './components/entities/post/post-list/post-list.component';
 import { PostFormComponent } from './components/entities/post/post-form/post-form.component';
@@ -56,7 +57,7 @@ import { CommentFormComponent } from './components/entities/comment/comment-form
     AppComponent,
     StartpageComponent, HomepageComponent, NotFoundPageComponent, LoginFormComponent,
     HeaderComponent, LeftbarComponent, ContainerComponent, RightbarComponent, FooterComponent,
-    UserProfileComponent, PostItemComponent, PostListComponent, PostFormComponent,
+    UserProfileComponent, UserWidgetComponent, PostItemComponent, PostListComponent, PostFormComponent,
     CommentItemComponent, CommentListComponent, CommentFormComponent
   ],
   bootstrap: [AppComponent]

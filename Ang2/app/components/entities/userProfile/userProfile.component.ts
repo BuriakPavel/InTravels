@@ -6,11 +6,13 @@ import { UserService } from '../../../services/user.service';
 @Component({
     moduleId: module.id,
     selector: 'userProfile',
-    templateUrl: '../../entities/userProfile/userProfile.component.html'
+    templateUrl: '../../entities/userProfile/userProfile.component.html',
+    styleUrls: ['../../entities/userProfile/userProfile.component.css']
 })
 
 export class UserProfileComponent implements OnInit {
     userProfile: IUserProfile = new UserProfile();
+    activeTab: number = 3;
 
     constructor(private userService: UserService) { }
 
@@ -21,4 +23,9 @@ export class UserProfileComponent implements OnInit {
         //         this.userProfile = userProfile;
         //     });
     }
+
+    setActiveTab(index: number){
+        this.activeTab = index;
+    }
+
 }
