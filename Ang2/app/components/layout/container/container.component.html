@@ -41,20 +41,17 @@
   <h2>Travel's categories</h2>
   <br>
   <div class="row categories">
-    <div class="col-sm-4 category-item">
-      <span class="fa fa-bicycle logo-small"></span>
+    <div #category1 (mouseover)="rotateYDIV(category1)" class="col-sm-4 category-item">
+      <span class="fa fa-bicycle logo-small" aria-hidden="true"></span>
       <h4>BIKE</h4>
-      <p></p>
     </div>
-    <div class="col-sm-4 category-item">
-      <span class="fa fa-car logo-small"></span>
+    <div #category2 (mouseover)="rotateYDIV(category2)" class="col-sm-4 category-item">
+      <span class="fa fa-car logo-small" aria-hidden="false"></span>
       <h4>CAR</h4>
-      <p></p>
     </div>
-    <div class="col-sm-4 category-item">
-      <span class="fa fa-motorcycle logo-small"></span>
+    <div #category3 (mouseover)="rotateYDIV(category3)" class="col-sm-4 category-item">
+      <span class="fa fa-motorcycle logo-small" aria-hidden="true"></span>
       <h4>MOTO</h4>
-      <p></p>
     </div>
   </div>
   <br><br>
@@ -62,17 +59,14 @@
     <div class="col-sm-4 category-item">
       <span class="fa fa-compass logo-small"></span>
       <h4>CAMPAIGN</h4>
-      <p></p>
     </div>
     <div class="col-sm-4 category-item">
       <span class="fa fa-globe logo-small"></span>
       <h4>ALL</h4>
-      <p></p>
     </div>
     <div class="col-sm-4 category-item">
       <span class="fa fa-ship logo-small"></span>
       <h4>SHIP</h4>
-      <p></p>
     </div>
   </div>
   <br><br>
@@ -80,17 +74,14 @@
     <div class="col-sm-4 category-item">
       <span class="fa fa-bus logo-small"></span>
       <h4>BUS</h4>
-      <p></p>
     </div>
     <div class="col-sm-4 category-item">
       <span class="fa fa-plane logo-small"></span>
       <h4>PLANE</h4>
-      <p></p>
     </div>
     <div class="col-sm-4 category-item">
       <span class="fa fa-train logo-small"></span>
       <h4>TRAIN</h4>
-      <p></p>
     </div>
   </div>
 </div>

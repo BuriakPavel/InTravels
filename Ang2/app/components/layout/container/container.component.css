@@ -13,7 +13,7 @@ div #myPage {
       font-size: 19px;
       line-height: 1.375em;
       font-weight: 400;
-      margin-bottom: 30px;
+      padding: 0px;
   }
   .jumbotron {
       background-color: #4e5d6c;
@@ -30,6 +30,10 @@ div #myPage {
   .logo-small {
       color: #bf5a16;
       font-size: 50px;
+  }
+  .logo-small::hover {
+      color: #f6f6f6;
+      font-size: 60px;
   }
   .logo {
       color: #bf5a16;
@@ -67,11 +71,23 @@ div #myPage {
   }
   
   .categories .category-item {
-      border-width: 2px;
-      border-color: #df691a;
-      border-radius: 6px;
-      }
-      
+    border-width: 3px;
+    border: solid #df691a;
+    border-radius: 30px;
+    padding: 4%;
+    margin: 2% 4%;
+    min-height: 155px;
+    min-width: 155px;
+    max-height: 25%;
+    max-width: 25%;
+}
+
+.categories .category-item:hover {
+    border: solid #fff;
+    background: #df691a;
+    color: #f6f6f6;
+   }
+
   .slide {
       animation-name: slide;
       -webkit-animation-name: slide;

@@ -11,9 +11,9 @@
 		
 		<h1>{{ 'StartPage_Tagline_Text' | translate:lang }}</h1>
 		
-		<button class="btn btn-md btn-primary" *ngIf="played"><span (click)="playStopVideo(video)" class="glyphicon glyphicon-pause"></span></button>
-		<button class="btn btn-md btn-primary" *ngIf="!played"><span (click)="playStopVideo(video)" class="glyphicon glyphicon-play"></span></button>
-		<button class="btn btn-md btn-primary" *ngIf="video.volume == 1"><span (click)="videoVolume(video)" class="text-right glyphicon glyphicon-volume-up"></span></button>
-		<button class="btn btn-md btn-primary" *ngIf="video.volume == 0"><span (click)="videoVolume(video)" class="text-right glyphicon glyphicon-volume-off"></span></button>
+		<button (click)="playStopVideo(video)" class="btn btn-md btn-primary" *ngIf="played"><span class="glyphicon glyphicon-pause"></span></button>
+		<button (click)="playStopVideo(video)" class="btn btn-md btn-primary" *ngIf="!played"><span class="glyphicon glyphicon-play"></span></button>
+		<button (click)="videoVolume(video)" class="btn btn-md btn-primary" *ngIf="video.volume == 1"><span class="text-right glyphicon glyphicon-volume-up"></span></button>
+		<button (click)="videoVolume(video)" class="btn btn-md btn-primary" *ngIf="video.volume == 0"><span class="text-right glyphicon glyphicon-volume-off"></span></button>
 	</div>
 </div>
