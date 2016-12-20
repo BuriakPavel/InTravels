@@ -23,7 +23,6 @@ export class HeaderComponent extends Locale {
     public ChangeCulture(language: string, country: string) {
         this.locale.setCurrentLocale(language, country);
         this.activeLang = language;
-        //this.locale.setCurrentCurrency(currency);
     }
 
     isAutenticate() {

@@ -95,19 +95,20 @@ namespace InTravels.BLL.Services
         public UserDTO GetUserByEmail(string email)
         {
             UserProfile userProfile = DB.UserProfileManager.GetUserInfoByEmail(email);
-			UserDTO userDto = new UserDTO()
+            if (userProfile != null)
 			{
-				Id = userProfile.Id,
-				Password = userProfile.ApplicationUser.PasswordHash,
-				Email = userProfile.ApplicationUser.Email,
-				UserName = userProfile.ApplicationUser.Email,
-				FirstName = userProfile.FirstName,
-				LastName = userProfile.LastName,
-				Address = userProfile.Address,
-				Age = userProfile.Age,
-				Gender = userProfile.Gender
+                UserDTO userDto = new UserDTO();
+                userDto.Email = userProfile.ApplicationUser.Email;
+                userDto.UserName = userProfile.ApplicationUser.Email;
+                userDto.FirstName = userProfile.FirstName;
+                userDto.LastName = userProfile.LastName;
+                userDto.Address = userProfile.Address;
+                userDto.Age = userProfile.Age;
+                userDto.Gender = userProfile.Gender;
+
+                return userDto;
 			};
-			return userDto;
+            return null;
         }
 
 		public async Task<OperationDetails> UpdateUser(UserDTO userDTO)

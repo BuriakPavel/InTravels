@@ -10,7 +10,7 @@ import { IUserProfile } from '../classes/userProfile';
 
 @Injectable()
 export class UserService {
-    private getUserProfileUrl: string = "http://192.168.1.102/InTravels.WebAPI/api/UserProfile/GetProfile";
+    private getUserProfileUrl: string = "http://10.214.3.13/InTravels.WebAPI/api/UserProfile/GetProfile";
 
     constructor(
         private http: Http,
@@ -18,20 +18,22 @@ export class UserService {
     }
 
     getUserProfile(): Observable<IUserProfile> {
-        // add authorization header with jwt token
         var currentUser = JSON.parse(localStorage.getItem('currentUser'));
         let headers = new Headers({
-            'Authorization': 'Bearer ' + this.authenticationService.token
+            'Authorization': 'Bearer ' + currentUser.token
         });
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
         
         let body: string = 'Email=' + currentUser.username; 
 
-        // get users from api
         return this.http.post(this.getUserProfileUrl, body, {
             headers: headers
-        }).map(response => response.json())
-        .catch(this.handleError);
+        }).map((res: Response) => {
+             if (res.ok == true){
+                var result = res.json()
+                return result;
+             }
+        }).catch(this.handleError);
     }
 
     handleError(error: any): Observable<any> {

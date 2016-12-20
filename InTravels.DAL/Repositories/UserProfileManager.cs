@@ -30,7 +30,7 @@ namespace InTravels.DAL.Repositories
             {
                 var userProfile = db.UserProfiles
                     .Include(x => x.ApplicationUser)
-                    .First(x => x.ApplicationUser.Email == email);
+                    .FirstOrDefault(x => x.ApplicationUser.Email == email);
                 return userProfile;
             }
         }

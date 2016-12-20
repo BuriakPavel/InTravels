@@ -23,5 +23,7 @@ namespace InTravels.WebAPI.ViewModels
         public Gender Gender { get; set; }
         public int Age { get; set; }
         public string Image { get; set; }
+
+        public Dictionary<string, object> Errors { get; set; }
     }
 }

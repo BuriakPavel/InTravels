@@ -16,9 +16,14 @@ export class UserProfileComponent implements OnInit {
 
     ngOnInit() {
         // get users from secure api end point
-        // this.userService.getUserProfile()
-        //     .subscribe(userProfile => {
-        //         this.userProfile = userProfile;
-        //     });
+        this.userService.getUserProfile()
+            .subscribe(data => {
+                let result = data;
+                if (result != null) {
+                    this.userProfile = result;
+                    console.log("profile: ", result);
+                }
+            }, error => { });
+
     }
 }

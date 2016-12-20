@@ -99,6 +99,9 @@ div.modal-header {
     border-bottom: 50px solid #2b3e50;
     height: 0;
     line-height: 50px;
+}
+
+.form-tab p {
     cursor: pointer;    
 }
 

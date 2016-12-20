@@ -121,7 +121,7 @@
     <value>Обрати</value>
   </data>
 	<data name="Copyright_Format" xml:space="preserve">
-    <value>Авторське право © {0} - Павло Буряк. Усi права захищенi.</value>
+    <value>Авторське право © 2016 - Павло Буряк. Усi права захищенi.</value>
   </data>
 	<data name="Home_Title_Text" xml:space="preserve">
     <value>Головна</value>
@@ -169,6 +169,51 @@
 		<value>Публiкації</value>
 	</data>
 	<data name="LoginForm_Title" xml:space="preserve">
-		<value>Увiйти</value>
+		<value>Вхід або реєстрація</value>
+	</data>
+	<data name="LoginForm_Login_Button" xml:space="preserve">
+		<value>Увійти</value>
+	</data>
+	<data name="LoginForm_Register_Button" xml:space="preserve">
+		<value>Зареєструватися</value>
+	</data>
+	<data name="LoginForm_FirstName_Placeholder" xml:space="preserve">
+		<value>Ім'я</value>
+	</data>
+	<data name="LoginForm_LastName_Placeholder" xml:space="preserve">
+		<value>Прізвище</value>
+	</data>
+	<data name="LoginForm_Email_Placeholder" xml:space="preserve">
+		<value>Електронна пошта</value>
+	</data>
+	<data name="LoginForm_Password_Placeholder" xml:space="preserve">
+		<value>Пароль</value>
+	</data>
+	<data name="LoginForm_ConfirmPassword_Placeholder" xml:space="preserve">
+		<value>Підтвердження паролю</value>
+	</data>
+	<data name="LoginForm_Password_Description" xml:space="preserve">
+		<value>Пароль повинен мати:</value>
+	</data>
+	<data name="LoginForm_Password_Description_1" xml:space="preserve">
+		<value>- довжину 8 - 15 символів;</value>
+	</data>
+	<data name="LoginForm_Password_Description_2" xml:space="preserve">
+		<value>- мінімум одну цифру;</value>
+	</data>
+	<data name="LoginForm_Password_Description_3" xml:space="preserve">
+		<value>- мінімум один спецсимвол;</value>
+	</data>
+	<data name="LoginForm_Password_Description_4" xml:space="preserve">
+		<value>- мінімум один рядний та один великий символ;</value>
+	</data>
+	<data name="LoginForm_RegisterTitle" xml:space="preserve">
+		<value>Реєстрація</value>
+	</data>
+	<data name="LoginForm_LoginTitle" xml:space="preserve">
+		<value>Вхід</value>
+	</data>
+	<data name="LeftBar_YouAreNotAuthorize" xml:space="preserve">
+		<value>Ви не авторизувалися на сайті. Будь ласка, увійдіть або зареєструйтеся.</value>
 	</data>
 </root>
